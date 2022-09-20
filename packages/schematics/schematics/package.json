@@ -1,0 +1,47 @@
+{
+  "name": "@samurais-app/schematics",
+  "version": "0.0.2-beta.2",
+  "description": "> TODO: description",
+  "author": "刘伟 <lemonpaimc@126.com>",
+  "homepage": "https://github.com/samurais-app/samurais-app/tree/main/packages/schematics#readme",
+  "license": "MIT",
+  "directories": {
+    "lib": "build",
+    "test": "__tests__"
+  },
+  "main": "build/index.js",
+  "files": [
+    "build/**/*"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samurais-app/samurais-app.git",
+    "directory": "packages/schematics/schematics"
+  },
+  "schematics": "./build/collection.json",
+  "scripts": {
+    "copy:collection": "cpx ./src/collection.json ./build && cpx './src/lib/**/schema.json' ./build/lib",
+    "copy:lib": "cpx './src/lib/**/{files,workspace}/**/*.*' ./build/lib && cpx './src/lib/**/{files,workspace}/**/.!(gitignore)' ./build/lib",
+    "postbuild": "npm run copy:collection && npm run copy:lib",
+    "build": "rm -rf build && tsc --project tsconfig.lib.json",
+    "link": "npm link"
+  },
+  "bugs": {
+    "url": "https://github.com/samurais-app/samurais-app/issues"
+  },
+  "dependencies": {
+    "@angular-devkit/core": "14.1.0",
+    "@angular-devkit/schematics": "14.1.0",
+    "@samurais-app/schematics-utils": "^0.0.2-beta.2",
+    "fs-extra": "^10.1.0",
+    "jsonc-parser": "^3.1.0",
+    "pluralize": "^8.0.0"
+  },
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "typescript": "^4.7.4"
+  }
+}

@@ -1,0 +1,51 @@
+name: test
+
+on:
+  push:
+    branches:
+      - dev
+
+env:
+  CI: true
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    name: test
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: setup node ${{ matrix.node_version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.16.0
+
+      - name: setup node config
+        run: |
+          npm set @samurais-app:registry=https://npm.pkg.github.com
+          npm set "//npm.pkg.github.com/:_authToken=${{ secrets.NPM }}"
+
+      - name: cache node_modules
+        uses: actions/cache@v3
+        id: cache
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: install packages
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm install --force
+
+      - name: lerna bootstrap
+        run: npm run bootstrap
+
+      - name: build
+        run: npm run build
+
+      - name: test
+        run: npm run test
+
+    

@@ -1,0 +1,50 @@
+{
+  "name": "@samurais-app/platform-cmd",
+  "version": "0.0.2-beta.2",
+  "description": "> TODO: description",
+  "author": "PC-202206061615\\Administrator <liuwei@51cto.com>",
+  "homepage": "https://github.com/samurais-app/samurais-app/tree/main/packages/command#readme",
+  "license": "ISC",
+  "directories": {
+    "lib": "build",
+    "test": "__tests__"
+  },
+  "bin": {
+    "samuras-server": "./bin/bin"
+  },
+  "files": [
+    "build",
+    "bin"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samurais-app/samurais-app.git",
+    "directory": "packages/command/command"
+  },
+  "scripts": {
+    "build": "tsc && tsc-alias",
+    "link": "npm link"
+  },
+  "bugs": {
+    "url": "https://github.com/samurais-app/samurais-app/issues"
+  },
+  "devDependencies": {
+    "@types/commander": "^2.12.2",
+    "@types/node": "^18.6.1",
+    "tsc-alias": "^1.7.0",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "@samurais-app/command-lib": "^0.0.2-beta.2",
+    "@samurais-app/lib": "^0.0.2-beta.2",
+    "@samurais-app/platform-core": "^0.0.2-beta.2",
+    "@samurais-app/platform-server": "^0.0.2-beta.2",
+    "@samurais-app/web-plugins": "^0.0.2-beta.2",
+    "chalk": "3.0.0",
+    "commander": "^9.4.0",
+    "node-emoji": "^1.11.0"
+  }
+}

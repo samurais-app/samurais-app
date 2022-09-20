@@ -1,0 +1,23 @@
+{
+  "name": "<%= name %>",
+  "version": "<%= version %>",
+  "description": "<%= description %>",
+  "author": "<%= author %>",
+  "workspaces": [
+    "<%= packages %>/*"
+  ],
+  "private": true,
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "prettier": "^2.3.2",
+    "source-map-support": "^0.5.20",
+    "tsconfig-paths": "4.0.0",
+    "typescript": "^4.3.5"
+  }
+}

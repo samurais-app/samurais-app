@@ -1,0 +1,10 @@
+host: 0.0.0.0
+protocol: http
+port: '3000'
+plugins:
+  - type: web
+    name: '@samurais-app/web-plugins'
+    version: 0.0.5
+  - type: auth
+    name: '@samurais-app/auth-plugins'
+    version: 0.0.5

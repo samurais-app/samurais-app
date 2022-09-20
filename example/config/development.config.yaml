@@ -1,0 +1,24 @@
+host: 0.0.0.0
+protocol: http
+port: '3000'
+plugins:
+  - type: web
+    name: '@samurais-app/web-plugins'
+    options:
+      component: '@samurais-app/web'
+      root: build
+      assets: manifest.json
+      home: /app
+      login: /auth/login
+      filter:
+        - /app
+      prefix: /public/
+  # - type: auth
+  #   name: '@samurais-app/auth-plugins'
+  #   options:
+  #     client:
+  #       host: 0.0.0.0
+  #       port: 6379
+  #     name: session
+  #     password: test@dbuser2018
+  #     db: 0

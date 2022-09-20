@@ -1,0 +1,34 @@
+{
+  "name": "@samurais-app/lib",
+  "version": "0.0.2-beta.2",
+  "description": "> TODO: description",
+  "author": "PC-202206061615\\Administrator <liuwei@51cto.com>",
+  "homepage": "https://github.com/samurais-app/samurais-app/tree/main/packages/core#readme",
+  "license": "ISC",
+  "main": "build/index.js",
+  "directories": {
+    "lib": "build",
+    "test": "__tests__"
+  },
+  "files": [
+    "build"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samurais-app/samurais-app.git",
+    "directory": "packages/lib"
+  },
+  "scripts": {
+    "build": "tsc && tsc-alias"
+  },
+  "bugs": {
+    "url": "https://github.com/samurais-app/samurais-app/issues"
+  },
+  "devDependencies": {
+    "tsc-alias": "^1.7.0",
+    "typescript": "^4.7.4"
+  }
+}

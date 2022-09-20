@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "project": {
+      "factory": "./lib/project/project.factory#main",
+      "description": "Create a project.",
+      "schema": "./lib/project/schema.json"
+    },
+    "application": {
+      "factory": "./lib/application/application.factory#main",
+      "description": "Create a application.",
+      "schema": "./lib/application/schema.json"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "SchematicsProject",
+  "title": "Nest Project Options Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        }
+      ],
+      "description": "工程名称",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use for the new project?"
+    },
+    "author": {
+      "type": "string",
+      "description": "创建者",
+      "default": ""
+    },
+    "description": {
+      "type": "string",
+      "description": "工程描述",
+      "default": ""
+    },
+    "directory": {
+      "type": "string",
+      "description": "工程文件夹位置"
+    },
+    "strict": {
+      "type": "boolean",
+      "description": "是否开启严格模式",
+      "default": false
+    },
+    "version": {
+      "type": "string",
+      "description": "工程版本号",
+      "default": "0.0.1"
+    },
+    "packageManager": {
+      "type": "string",
+      "description": "包管理器(npm、yarn、pnpm)"
+    },
+    "packages": {
+      "type": "string",
+      "description": "项目包存放文件夹",
+      "default": "packages"
+    },
+    "dependencies": {
+      "type": "string",
+      "description": "工程生产依赖"
+    },
+    "devDependencies": {
+      "type": "string",
+      "description": "工程开发依赖"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "@samurais-app/schematics-utils",
+  "version": "0.0.2-beta.2",
+  "description": "> TODO: description",
+  "author": "刘伟 <lemonpaimc@126.com>",
+  "homepage": "https://github.com/samurais-app/samurais-app/tree/main/packages/schematics/schematics-utils#readme",
+  "license": "ISC",
+  "main": "build/index.js",
+  "directories": {
+    "lib": "build",
+    "test": "__tests__"
+  },
+  "files": [
+    "build"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samurais-app/samurais-app.git",
+    "directory": "packages/schematics/schematics-utils"
+  },
+  "scripts": {
+    "build": "tsc && tsc-alias"
+  },
+  "bugs": {
+    "url": "https://github.com/samurais-app/samurais-app/issues"
+  },
+  "peerDependencies": {
+    "@angular-devkit/core": "14.1.0",
+    "@angular-devkit/schematics": "14.1.0"
+  },
+  "devDependencies": {
+    "tsc-alias": "^1.7.0",
+    "typescript": "^4.7.4"
+  }
+}

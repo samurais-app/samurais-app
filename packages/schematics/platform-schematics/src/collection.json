@@ -1,0 +1,10 @@
+{
+  "$schema": "./node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "plugin": {
+      "factory": "./lib/project/project.factory#main",
+      "description": "Create a plugin.",
+      "schema": "./lib/project/schema.json"
+    }
+  }
+}

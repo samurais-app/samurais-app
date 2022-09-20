@@ -1,0 +1,37 @@
+{
+  "name": "@samurais-app/store-plugins",
+  "version": "0.0.2-beta.2",
+  "description": "> TODO: description",
+  "author": "刘伟 <lemonpaimc@126.com>",
+  "homepage": "https://github.com/samurais-app/samurais-app/tree/main/packages/plugins/store-plugins#readme",
+  "license": "ISC",
+  "main": "build/store-plugins.js",
+  "directories": {
+    "lib": "build",
+    "test": "__tests__"
+  },
+  "files": [
+    "build"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samurais-app/samurais-app.git",
+    "directory": "packages/plugins/store-plugins"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/samurais-app/samurais-app/issues"
+  },
+  "dependencies": {
+    "@samurais-app/platform-core": "^0.0.2-beta.2"
+  },
+  "devDependencies": {
+    "tsc-alias": "^1.7.0",
+    "typescript": "^4.7.4"
+  }
+}
