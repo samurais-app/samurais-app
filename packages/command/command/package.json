@@ -1,6 +1,6 @@
 {
   "name": "@samurais-app/platform-cmd",
-  "version": "0.0.2-beta.2",
+  "version": "0.1.0",
   "description": "> TODO: description",
   "author": "PC-202206061615\\Administrator <liuwei@51cto.com>",
   "homepage": "https://github.com/samurais-app/samurais-app/tree/main/packages/command#readme",
@@ -38,11 +38,11 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "@samurais-app/command-lib": "^0.0.2-beta.2",
-    "@samurais-app/lib": "^0.0.2-beta.2",
-    "@samurais-app/platform-core": "^0.0.2-beta.2",
-    "@samurais-app/platform-server": "^0.0.2-beta.2",
-    "@samurais-app/web-plugins": "^0.0.2-beta.2",
+    "@samurais-app/command-lib": "^0.1.0",
+    "@samurais-app/lib": "^0.1.0",
+    "@samurais-app/platform-core": "^0.1.0",
+    "@samurais-app/platform-server": "^0.1.0",
+    "@samurais-app/web-plugins": "^0.1.0",
     "chalk": "3.0.0",
     "commander": "^9.4.0",
     "node-emoji": "^1.11.0"
