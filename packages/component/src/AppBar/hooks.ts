@@ -8,8 +8,6 @@ export function useAppBarScroll(props: AppBarProps) {
     function onScroll(event: any) {
         if ((event.documentElement.scrollTop || event.body.scrollTop) >= 10) {
             setStatus(true);
-        } else {
-            setStatus(false);
         }
     }
 
