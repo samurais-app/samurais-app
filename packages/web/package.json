@@ -1,10 +1,6 @@
 {
   "name": "@samurais-app/web",
-<<<<<<< Updated upstream
-  "version": "0.3.0-beta.1",
-=======
   "version": "0.0.0",
->>>>>>> Stashed changes
   "description": "> TODO: description",
   "author": "PC-202206061615\\Administrator <liuwei@51cto.com>",
   "homepage": "https://github.com/samurais-app/samurais-app/tree/main/packages/web-plugins#readme",
