@@ -1,6 +1,10 @@
 {
   "name": "@samurais-app/web",
+<<<<<<< Updated upstream
   "version": "0.3.0-beta.1",
+=======
+  "version": "0.0.0",
+>>>>>>> Stashed changes
   "description": "> TODO: description",
   "author": "PC-202206061615\\Administrator <liuwei@51cto.com>",
   "homepage": "https://github.com/samurais-app/samurais-app/tree/main/packages/web-plugins#readme",
@@ -59,9 +63,9 @@
     "@emotion/styled": "^11.10.0",
     "@mui/material": "^5.10.0",
     "@mui/system": "^5.10.0",
-    "@samurais-app/components": "^0.3.0-beta.0",
-    "@samurais-app/lib": "^0.3.0-beta.0",
-    "@samurais-app/platform-core": "^0.3.0-beta.0",
+    "@samurais-app/components": "^0.0.0",
+    "@samurais-app/lib": "^0.0.0",
+    "@samurais-app/platform-core": "^0.0.0",
     "axios": "^0.27.2",
     "classnames": "^2.3.1",
     "react": "^18.2.0",

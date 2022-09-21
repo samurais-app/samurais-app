@@ -19,6 +19,7 @@
     "start:web": "lerna run start --scope=@samurais-app/web --parallel",
     "clean:package": "rimraf **/node_modules",
     "clean:build": "rimraf packages/**/build",
+    "clean:changelog": "node ./scripts/clear-changelog.js",
     "prebuild": "npm run clean:build",
     "build:component": "lerna run build --scope=@samurais-app/components --parallel",
     "build": "lerna run build",

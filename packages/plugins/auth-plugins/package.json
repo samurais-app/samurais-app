@@ -1,6 +1,6 @@
 {
   "name": "@samurais-app/auth-plugins",
-  "version": "0.3.0-beta.0",
+  "version": "0.0.0",
   "description": "> TODO: description",
   "author": "刘伟 <lemonpaimc@126.com>",
   "homepage": "https://github.com/samurais-app/samurais-app/tree/main/packages/plugins/auth-plugins#readme",
@@ -28,7 +28,7 @@
     "url": "https://github.com/samurais-app/samurais-app/issues"
   },
   "dependencies": {
-    "@samurais-app/platform-core": "^0.3.0-beta.0"
+    "@samurais-app/platform-core": "^0.0.0"
   },
   "devDependencies": {
     "tsc-alias": "^1.7.0",
