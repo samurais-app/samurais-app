@@ -6,7 +6,7 @@ const themeConfig:Theme = {
         primary: '#0A992E',
         transparent: 'transparent',
         error: '#fb1f6a',
-        background: '#ffffff'
+        background: '#0A992E'
     },
     spacing: {
         fontSize: [12,16,22,30,40],

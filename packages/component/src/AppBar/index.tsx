@@ -24,7 +24,7 @@ export function AppBar(props: AppBarProps) {
     };
 
     return (
-        <AppBarStyled className={fixed(props)}>
+        <AppBarStyled {...props} className={fixed(props)}>
             {logo()}
             {navigation()}
             {extend()}
