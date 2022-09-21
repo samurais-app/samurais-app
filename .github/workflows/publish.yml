@@ -1,10 +1,11 @@
 name: publish
 
 on:
-  push:
+  pull_request:
     paths:
       - packages/**
       - lerna.json
+    types: [closed]
     branches:
       - development
       - master
@@ -80,6 +81,27 @@ jobs:
 
       - name: build
         run: npm run build
+
+      - name: git status
+        id: status
+        shell: bash -ex {0}
+        run: |
+          status=$(git status -s);
+          if [[ -n "$status" ]] ; then
+            echo "::set-output name=status::true"
+          else 
+            echo "::set-output name=status::false"
+          fi
+        env:
+          GITHUB_TOKEN: ${{secrets.NPM}}
+
+      - name: action commit
+        uses: stefanzweifel/git-auto-commit-action@v4
+        if: steps.status.outputs.status == 'true'
+        with:
+          commit_message: auto commit
+          commit_options: '--no-verify --signoff'
+          status_options: '--untracked-files=no'
 
       - name: username
         run: |
