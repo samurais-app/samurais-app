@@ -1,4 +1,5 @@
 node_modules
+**/*.md'
 packages/**/build/**/**.*
 packages/**/**/build/**/**.*
 coverage
