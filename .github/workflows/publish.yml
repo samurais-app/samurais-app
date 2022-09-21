@@ -128,7 +128,7 @@ jobs:
 
       - name: create release
         id: create_release
-        if: github.ref == 'refs/heads/master'
+        if: github.base_ref == 'master'
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
