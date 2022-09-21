@@ -1,6 +1,6 @@
 {
   "name": "@samurais-app/platform-server",
-  "version": "0.0.2-beta.5",
+  "version": "0.0.2-beta.6",
   "description": "> TODO: description",
   "author": "刘伟 <lemonpaimc@126.com>",
   "homepage": "https://github.com/samurais-app/samurais-app/tree/main/packages/server#readme",
@@ -36,8 +36,8 @@
     "@fastify/session": "^9.0.0",
     "@fastify/static": "^6.5.0",
     "@mgcrea/pino-pretty-compact": "^0.6.0",
-    "@samurais-app/platform-api": "^0.0.2-beta.5",
-    "@samurais-app/platform-core": "^0.0.2-beta.5",
+    "@samurais-app/platform-api": "^0.0.2-beta.6",
+    "@samurais-app/platform-core": "^0.0.2-beta.6",
     "chalk": "3.0.0",
     "connect-redis": "^6.1.3",
     "fastify": "4.2.1",
