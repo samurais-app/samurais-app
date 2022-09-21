@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1-beta.3](https://github.com/samurais-app/samurais-app/compare/v0.1.1-beta.2...v0.1.1-beta.3) (2022-09-21)
+
+**Note:** Version bump only for package @samurais-app/web
+
+
+
+
+
+
 ## 0.1.1-beta.2 (2022-09-21)
 
 **Note:** Version bump only for package @samurais-app/web
