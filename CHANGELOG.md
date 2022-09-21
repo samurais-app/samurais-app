@@ -24,18 +24,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 * **ci): ci(ci:** ci ([04629c7](https://github.com/samurais-app/samurais-app/commit/04629c7231a656307a4212fd200297790517be33))
 * **ci:** changlog ([b797799](https://github.com/samurais-app/samurais-app/commit/b79779980d3a44696dbae7d99bcbe729cd0471d1))
+* **ci:** ci ([6c8e57d](https://github.com/samurais-app/samurais-app/commit/6c8e57dd26c15417e8be95c1543300015f4fdf3b))
 * **ci:** ci ([5b6fc3a](https://github.com/samurais-app/samurais-app/commit/5b6fc3a8e9753c6bd1cd2da9ff1e349c37c566d8))
+* **ci:** ci ([110e44e](https://github.com/samurais-app/samurais-app/commit/110e44eb7e7b72bcc893f1943107d00e8c03be9b))
+* **ci:** ci ([ae2847f](https://github.com/samurais-app/samurais-app/commit/ae2847fd9e7c33b7c5f105d2c4144fb9858477c3))
 * **ci:** ci ([7e9fcd5](https://github.com/samurais-app/samurais-app/commit/7e9fcd5aa8d0143c9f219a3804a681e15f540d7d))
 * **ci:** log ([71df60a](https://github.com/samurais-app/samurais-app/commit/71df60aba281727993cc024a9e7ab7437ea30f86))
-* **ci:** log build ([e6d8e63](https://github.com/samurais-app/samurais-app/commit/e6d8e6309ad74e18d20ea51e79284a7d36b5a90e))
-* **ci:** log流程 ([e9a166d](https://github.com/samurais-app/samurais-app/commit/e9a166d52e97a4971272ca27181fd731d0d6101c))
-
-
-
-## [0.0.0](https://github.com/samurais-app/samurais-app/compare/v0.0.2-beta.9...v0.0.0) (2022-09-21)
-
-
-### 👷 Continuous Integration | CI 配置
-
 * **ci:** log build ([e6d8e63](https://github.com/samurais-app/samurais-app/commit/e6d8e6309ad74e18d20ea51e79284a7d36b5a90e))
 * **ci:** log流程 ([e9a166d](https://github.com/samurais-app/samurais-app/commit/e9a166d52e97a4971272ca27181fd731d0d6101c))

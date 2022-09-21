@@ -21,12 +21,3 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 * **ci:** changlog ([b797799](https://github.com/samurais-app/samurais-app/commit/b79779980d3a44696dbae7d99bcbe729cd0471d1))
 * **ci:** log流程 ([e9a166d](https://github.com/samurais-app/samurais-app/commit/e9a166d52e97a4971272ca27181fd731d0d6101c))
-
-
-
-## [0.0.0](https://github.com/samurais-app/samurais-app/compare/v0.0.2-beta.9...v0.0.0) (2022-09-21)
-
-
-### 👷 Continuous Integration | CI 配置
-
-* **ci:** log流程 ([e9a166d](https://github.com/samurais-app/samurais-app/commit/e9a166d52e97a4971272ca27181fd731d0d6101c))
