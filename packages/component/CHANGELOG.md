@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [0.0.2-beta.10](https://github.com/samurais-app/samurais-app/compare/v0.0.2-beta.9...v0.0.2-beta.10) (2022-09-21)
+## [0.0.0](https://github.com/samurais-app/samurais-app/compare/v0.0.2-beta.9...v0.0.0) (2022-09-21)
 
 
 ### 👷 Continuous Integration | CI 配置
