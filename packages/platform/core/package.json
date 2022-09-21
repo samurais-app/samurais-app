@@ -1,6 +1,6 @@
 {
   "name": "@samurais-app/platform-core",
-  "version": "0.0.2-beta.3",
+  "version": "0.0.2-beta.4",
   "description": "> TODO: description",
   "author": "刘伟 <lemonpaimc@126.com>",
   "homepage": "https://github.com/samurais-app/samurais-app/tree/main/packages/platform/core#readme",
@@ -28,7 +28,7 @@
     "url": "https://github.com/samurais-app/samurais-app/issues"
   },
   "dependencies": {
-    "@samurais-app/lib": "^0.0.2-beta.3",
+    "@samurais-app/lib": "^0.0.2-beta.4",
     "fastify": "^4.5.3"
   },
   "devDependencies": {
