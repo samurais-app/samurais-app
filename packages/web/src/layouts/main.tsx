@@ -8,7 +8,7 @@ export default function Layout() {
     const { update } = useContext(ThemeContent);
     return (
         <Application>
-            <AppBar fixed><div>自动change</div></AppBar>
+            <AppBar transparent fixed><div>自动change</div></AppBar>
             <Outlet />
         </Application>
     );

@@ -36,7 +36,7 @@
     "styled-components": "^5.3.5"
   },
   "dependencies": {
-    "@frade-sam/samtools": "1.0.22",
+    "@frade-sam/samtools": "1.0.23",
     "deepmerge": "^4.2.2"
   }
 }
