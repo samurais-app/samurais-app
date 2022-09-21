@@ -13,20 +13,21 @@
   ],
   "scripts": {
     "prepare": "husky install && chmod ug+x .husky/*",
+    "bootstrap": "npm install --force",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "start:web": "lerna run start --scope=@samurais-app/web --parallel",
     "clean:package": "rimraf **/node_modules",
     "clean:build": "rimraf packages/**/build",
-    "bootstrap": "npm install --force",
+    "clean:changelog": "node ./scripts/clear-changelog.js",
     "prebuild": "npm run clean:build",
     "build:component": "lerna run build --scope=@samurais-app/components --parallel",
     "build": "lerna run build",
     "link:package": "lerna run link",
     "lint:fix": "eslint --fix --cache --ext .ts,.tsx ./packages",
-    "version:bate": "lerna version --conventional-commits --preid beta --yes",
+    "version:bate": "lerna version --conventional-commits --conventional-prerelease --preid beta --yes",
     "version:release": "lerna version --conventional-commits --yes",
-    "publish": "lerna publish from-git --yes"
+    "publish": "lerna publish from-git  --yes"
   },
   "repository": {
     "type": "git",

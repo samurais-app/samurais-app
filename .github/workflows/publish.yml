@@ -44,9 +44,6 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm run bootstrap
 
-      - name: build
-        run: npm run build
-
       - name: test
         run: npm run test
 
