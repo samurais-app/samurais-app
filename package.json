@@ -25,8 +25,8 @@
     "build": "lerna run build",
     "link:package": "lerna run link",
     "lint:fix": "eslint --fix --cache --ext .ts,.tsx ./packages",
-    "version:bate": "lerna version --no-push --conventional-commits --conventional-prerelease --preid beta --yes",
-    "version:release": "lerna version --no-push --conventional-commits --yes",
+    "version:bate": "lerna version --conventional-commits --conventional-prerelease --preid beta --yes",
+    "version:release": "lerna version --conventional-commits --yes",
     "publish": "lerna publish from-git  --yes"
   },
   "repository": {
