@@ -12,7 +12,11 @@
   "includeMergedTags": true,
   "command": {
     "publish": {
-      "registry": "https://npm.pkg.github.com"
+      "registry": "https://npm.pkg.github.com",
+      "conventionalCommits": true
+    },
+    "version": {
+      "conventionalCommits": true
     },
     "ignoreChanges": [
       "*.md"
@@ -71,11 +75,7 @@
     ],
     "issuePrefixes": [
       "#"
-    ],
-    "issueUrlFormat": "{{host}}/{{owner}}/{{repository}}/issues/{{id}}",
-    "commitUrlFormat": "{{host}}/{{owner}}/{{repository}}/commit/{{hash}}",
-    "compareUrlFormat": "{{host}}/{{owner}}/{{repository}}/compare/{{previousTag}}...{{currentTag}}",
-    "userUrlFormat": "{{host}}/{{user}}"
+    ]
   },
   "version": "0.0.2-beta.9"
 }
