@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1-beta.0](https://github.com/samurais-app/samurais-app/compare/v0.1.0...v0.1.1-beta.0) (2022-09-21)
+
+
+### 📦‍ Build System | 打包构建
+
+* **build:** appbar背景设置 ([57df38d](https://github.com/samurais-app/samurais-app/commit/57df38dbc4597ffcd88f11c9d4da748725065e34))
+
+
+
 ## [0.1.0](https://github.com/samurais-app/samurais-app/compare/v0.1.0-beta.0...v0.1.0) (2022-09-21)
 
 **Note:** Version bump only for package samurais

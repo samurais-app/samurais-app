@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { padding } from './function';
+import { appBarBackground, appBarBlur, padding } from './function';
 
 export const AppBarStyled = styled.div`
   display: flex;
@@ -8,6 +8,8 @@ export const AppBarStyled = styled.div`
   padding: ${padding};
   box-sizing: border-box;
   width: 100%;
+  backdrop-filter: ${appBarBlur};
+  background-color: ${appBarBackground};
   &.fixed {
     position: sticky;
     top: 0;
