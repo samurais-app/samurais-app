@@ -5,7 +5,7 @@ import { AppBarBaseProps } from '../interface';
 
 
 export function padding(props: ThemedStyledProps<AppBarBaseProps,Theme>) {
-    return `${props.theme.spacing.padding[0]}px ${props.theme.spacing.padding[2]}px`;
+    return `${props.theme.spacing.padding[1]}px ${props.theme.spacing.padding[4]}px`;
 }
 
 export function fixed(props: AppBarBaseProps) {
@@ -17,6 +17,6 @@ export function appBarBlur(props: AppBarBaseProps) {
 }
 
 export function appBarBackground(props: AppBarBaseProps) {
-    if(props.transparent) return opacity('#000', 0.2);
+    if(props.transparent) return opacity('#000', 0.01);
     return props.background ? props.background : 'transparent';
 }

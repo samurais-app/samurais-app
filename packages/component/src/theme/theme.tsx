@@ -4,6 +4,7 @@ import { createGlobalStyle, ThemedStyledProps, ThemeProvider } from 'styled-comp
 import { ThemeContent } from './context';
 import themeConfig from './defaultConfig';
 import { Theme } from './interface';
+import { complementaryColor } from '@frade-sam/samtools';
 
 export interface ThemeContextProps {
     children: JSX.Element | JSX.Element;
@@ -15,6 +16,15 @@ const Global = createGlobalStyle<ThemedStyledProps<any,Theme>>`
         padding: 0;
         height: 100vh;
         background-color: ${props => props.theme.color.background};
+        overflow: overlay;
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: ${props => complementaryColor(props.theme.color.background)};
+            border-radius: 25px;
+        }
     }
     #app {
         margin: 0;

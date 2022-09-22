@@ -12,6 +12,19 @@ module.exports = {
         loader: 'babel-loader',
         options: { cacheDirectory: true },
         exclude: /node_modules/,
+      },
+      {
+        test:/\.(jpg|png|gif)$/,
+        type: 'asset',
+        parser: {
+            dataUrlCondition: {
+                maxSize: 10 * 1024
+            }
+        },
+        generator: {
+            filename: 'img/[name].[hash:6][ext]',
+            publicPath: './'
+        }
       }
     ]
   },

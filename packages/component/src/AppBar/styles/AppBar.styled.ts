@@ -20,7 +20,9 @@ export const AppBarStyled = styled.div`
   }
 `;
 
-export const AppLogoStyled = styled.div``;
+export const AppLogoStyled = styled.div`
+  vertical-align: bottom;
+`;
 
 export const AppNavigationStyled = styled.div`
   flex: 1;
