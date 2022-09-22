@@ -7,6 +7,7 @@ import { Theme } from './interface';
 import { complementaryColor } from '@frade-sam/samtools';
 
 export interface ThemeContextProps {
+    theme?: Theme;
     children: JSX.Element | JSX.Element;
 }
 
@@ -17,6 +18,7 @@ const Global = createGlobalStyle<ThemedStyledProps<any,Theme>>`
         height: 100vh;
         background-color: ${props => props.theme.color.background};
         overflow: overlay;
+        font-size: 12px;
         &::-webkit-scrollbar {
             width: 8px;
             height: 8px;
@@ -34,7 +36,7 @@ const Global = createGlobalStyle<ThemedStyledProps<any,Theme>>`
 `;
 
 export function ThemeConfig(props: ThemeContextProps) {
-    const [theme, setTheme] = useState(themeConfig);
+    const [theme, setTheme] = useState(deepmerge(themeConfig, props.theme || {}));
 
     const update = (the: Theme) => {
         setTheme((data) => {
