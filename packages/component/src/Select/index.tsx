@@ -1,8 +1,6 @@
 import React, { useMemo } from 'react';
-import { createPortal } from 'react-dom';
 import { SelectBaseProps } from './interface';
-import { OptionBoxStyled, OptionStyled } from './styles';
-import { SelectStyled } from './styles/Select.styled';
+import { OptionBoxStyled, OptionStyled, SelectStyled } from './styles';
 
 export interface SelectProps extends SelectBaseProps {
     children?:JSX.Element | JSX.Element[];
@@ -15,6 +13,6 @@ export function Select(props: SelectProps) {
         return <OptionBoxStyled>{props.options.map((item) => <OptionStyled />)}</OptionBoxStyled>;
     },[props.children]);
     return (
-        <SelectStyled />
+        <SelectStyled>1</SelectStyled>
     );
 }

@@ -14,4 +14,8 @@ export interface FieldProps {
   error?: string;
 }
 
-export type Size = 'small' | 'middle' | 'large';
+export enum Size {
+  small = 0,
+  middle = 1,
+  large = 2
+}

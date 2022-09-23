@@ -11,7 +11,7 @@ export function backgroundColor(num?: number) {
 }
 
 export function padding(props: ThemedStyledProps<ButtonBaseProps,Theme>) {
-    const pad:Record<Size, string> = {
+    const pad:Record<keyof typeof Size, string> = {
         small: `${props.theme.spacing.padding[0]}px ${props.theme.spacing.padding[2]}px`,
         middle: `${props.theme.spacing.padding[1]}px ${props.theme.spacing.padding[3]}px`,
         large: `${props.theme.spacing.padding[2]}px ${props.theme.spacing.padding[4]}px`,

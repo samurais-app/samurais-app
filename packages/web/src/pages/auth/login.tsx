@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Form, Input, Button } from '@samurais-app/components';
+import { Form, Input, Button, Select } from '@samurais-app/components';
 import { LoginBoxStyled, LoginStyled } from './login.styled';
 
 
@@ -21,6 +21,9 @@ export default function Login() {
         <LoginStyled>
             <LoginBoxStyled>
                 <Form form={form}>
+                    <Form.Item name='asd'>
+                        <Select />
+                    </Form.Item>
                     <Form.Item name="account.code">
                         <Input type='text' placeholder="asds" size="middle" />
                     </Form.Item>

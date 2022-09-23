@@ -7,5 +7,5 @@ export enum borderRadiusSize {
 }
 
 export interface ButtonBaseProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  size?: Size;
+  size?: keyof typeof Size;
 }
