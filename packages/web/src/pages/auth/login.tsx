@@ -1,15 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Form, Input, Button, Select } from '@samurais-app/components';
 import { LoginBoxStyled, LoginStyled } from './login.styled';
 
 
 
 export default function Login() {
-    const [form] = Form.useForm<{account: any, password: any}>({
+    const [form] = Form.useForm<{ account: any, password: any }>({
         onSubmit(data) {
             console.log(data);
         }
     });
+    const [val, setVal] = useState('');
     useEffect(() => {
         // const account = form.getContext('account');
         // account.addEventListener('dependent', function () {
@@ -21,9 +22,10 @@ export default function Login() {
         <LoginStyled>
             <LoginBoxStyled>
                 <Form form={form}>
-                    <Form.Item name='asd'>
-                        <Select />
-                    </Form.Item>
+                    <Select placeholder="uyuqw" value={val} onChange={(e) => { setVal(e); }}>
+                        <Select.Option value="1">1</Select.Option>
+                        <Select.Option value="2">2</Select.Option>
+                    </Select>
                     <Form.Item name="account.code">
                         <Input type='text' placeholder="asds" size="middle" />
                     </Form.Item>

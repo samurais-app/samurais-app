@@ -20,5 +20,8 @@ export const ApplicationLogo = styled.b`
   background-repeat: no-repeat;
 `;
 export const ApplicationExtends = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin-left: ${layoutExtendsMarginLeft};
 `;

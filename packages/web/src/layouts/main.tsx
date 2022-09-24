@@ -7,7 +7,9 @@ export default function Layout() {
     const { update } = useContext(ThemeContent);
     return (
         <Application>
-            <AppBar logo={<ApplicationLogo />} extends={<ApplicationExtends>1</ApplicationExtends>} transparent fixed><div>自动change</div></AppBar>
+            <AppBar logo={<ApplicationLogo />} extends={<ApplicationExtends>1</ApplicationExtends>} transparent fixed>
+                <div>自动change</div>
+            </AppBar>
             <Outlet />
         </Application>
     );
