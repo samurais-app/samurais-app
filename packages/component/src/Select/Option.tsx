@@ -15,7 +15,6 @@ export interface OptionProps extends OptionBaseProps {
  */
 export function Option(props: OptionProps) {
     const {value, children, ..._props} = props;
-    console.log(props);
     return (
         <OptionStyled className={props.isActive ? 'active' : ''} value={value} {..._props}>{children}</OptionStyled>
     );
@@ -33,7 +32,6 @@ export const OptionBox = React.forwardRef((props:OptionBoxProps, ref: any) => {
         if(isFunc(onChange)) onChange(value);
         if(isFunc(callback)) callback(event);
     };
-    console.log(props);
     const childrens = useMemo(() => {
         const childs:JSX.Element[] = isArray(children) ? children : [children];
         return React.Children.map(childs.filter(Boolean), (child) => {
@@ -42,5 +40,5 @@ export const OptionBox = React.forwardRef((props:OptionBoxProps, ref: any) => {
         });
     }, [children, props.value]);
 
-    return (<OptionBoxStyled ref={ref} {..._props}>{childrens}</OptionBoxStyled>);
+    return (<OptionBoxStyled onTransitionEnd={(e) => { console.log('e', e); }} ref={ref} {..._props}>{childrens}</OptionBoxStyled>);
 });
