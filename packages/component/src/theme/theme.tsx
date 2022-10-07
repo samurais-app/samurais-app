@@ -12,6 +12,14 @@ export interface ThemeContextProps {
 }
 
 const Global = createGlobalStyle<ThemedStyledProps<any,Theme>>`
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: ${props => complementaryColor(props.theme.color.background)};
+        border-radius: 25px;
+    }
     body {
         margin: 0;
         padding: 0;
@@ -19,14 +27,6 @@ const Global = createGlobalStyle<ThemedStyledProps<any,Theme>>`
         background-color: ${props => props.theme.color.background};
         overflow: overlay;
         font-size: 12px;
-        &::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
-        &::-webkit-scrollbar-thumb {
-            background-color: ${props => complementaryColor(props.theme.color.background)};
-            border-radius: 25px;
-        }
     }
     #app {
         margin: 0;

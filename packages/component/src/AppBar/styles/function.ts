@@ -1,4 +1,4 @@
-import { complementaryColor, opacity } from '@frade-sam/samtools';
+import { completionHex, opacity } from '@frade-sam/samtools';
 import { Theme } from 'src/theme';
 import { ThemedStyledProps } from 'styled-components';
 import { AppBarBaseProps } from '../interface';
@@ -17,6 +17,6 @@ export function appBarBlur(props: AppBarBaseProps) {
 }
 
 export function appBarBackground(props: ThemedStyledProps<AppBarBaseProps, Theme>) {
-    if(props.transparent) return opacity(complementaryColor(props.theme.color.background), 0.01);
+    if(props.transparent) return opacity(completionHex(props.theme.color.background), 0.01);
     return props.background ? props.background : 'transparent';
 }

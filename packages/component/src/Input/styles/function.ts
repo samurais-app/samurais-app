@@ -1,3 +1,4 @@
+import { color, complementaryColor, opacity } from '@frade-sam/samtools';
 import { Size } from 'src/common/interface';
 import { DefaultTheme, Theme } from 'src/theme';
 import { ThemedStyledProps } from 'styled-components';
@@ -12,4 +13,8 @@ export function inputBorderSize(props: ThemedStyledProps<InputBaseProps,Theme>) 
 export function inputBorderRadius(props: ThemedStyledProps<InputBaseProps,Theme>) {
     if(!props.theme.borderRadius) return 0;
     return props.theme && props.theme.spacing ? props.theme.spacing.radius[0] : DefaultTheme.spacing.radius[0];
+}
+
+export function inputBgColor(props: ThemedStyledProps<InputBaseProps,Theme>) {
+    return opacity(complementaryColor(props.theme.color.background), 0.05);
 }

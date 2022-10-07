@@ -14,7 +14,7 @@ export interface SelectBaseProps extends Pick<React.InputHTMLAttributes<HTMLInpu
     error?: string;
 }
 
-export interface OptionBoxBaseProps extends Omit<React.InputHTMLAttributes<HTMLUListElement>, 'width' | 'position' | 'top' | 'left' | 'onChange'> {
+export interface OptionBoxBaseProps extends Omit<React.InputHTMLAttributes<HTMLDivElement>, 'width' | 'position' | 'top' | 'left' | 'onChange'> {
     show?: boolean;
     value?: string | number;
     width: number;

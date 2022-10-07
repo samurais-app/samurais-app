@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import { SelectBaseProps } from '../interface';
-import { selectBorder, selectBorderRadius, selectBorderSize } from './function';
+import { selectBgColor, selectBorder, selectBorderRadius, selectBorderSize } from './function';
 
 
 export const SelectStyled = styled.div<SelectBaseProps>`
     box-sizing: border-box;
     width: 100%;
-    background-color: #f6f6f6;
+    background-color: ${selectBgColor};
     padding: 6px 8px;
     border-radius: ${selectBorderRadius}px;
     border: 1px solid ${selectBorder};

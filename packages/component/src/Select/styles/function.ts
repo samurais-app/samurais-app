@@ -1,4 +1,4 @@
-import { complementaryColor, opacity } from '@frade-sam/samtools';
+import { complementaryColor, completionHex, opacity } from '@frade-sam/samtools';
 import { Size } from 'src/common/interface';
 import { DefaultTheme, Theme } from 'src/theme';
 import { ThemedStyledProps } from 'styled-components';
@@ -26,13 +26,17 @@ export function optionBoxBorderRadius(props: ThemedStyledProps<OptionBoxBaseProp
 }
 
 export function optionBoxShow(props: ThemedStyledProps<OptionBoxBaseProps,Theme>) {
-    return opacity(complementaryColor(props.theme.color.background), 0.02);
+    return opacity(completionHex(props.theme.color.background), 0.05);
 }
 
 export function optionBackground(type?: 'hover' | 'active') {
     return function (props: ThemedStyledProps<OptionBaseProps,Theme>) {
         if(!type) return props.theme.color.transparent;
-        if(type === 'hover') return opacity(complementaryColor(props.theme.color.background), 0.05);
-        return opacity(complementaryColor(props.theme.color.background), 0.1);
+        if(type === 'hover') return opacity(completionHex(props.theme.color.primary), 0.05);
+        return opacity(completionHex(props.theme.color.primary), 0.1);
     };
+}
+
+export function selectBgColor(props: ThemedStyledProps<SelectBaseProps,Theme>) {
+    return opacity(complementaryColor(props.theme.color.background), 0.05);
 }

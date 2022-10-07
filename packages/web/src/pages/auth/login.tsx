@@ -22,10 +22,18 @@ export default function Login() {
         <LoginStyled>
             <LoginBoxStyled>
                 <Form form={form}>
-                    <Select placeholder="uyuqw" value={val} onChange={(e) => { setVal(e); }}>
-                        <Select.Option value="1">1</Select.Option>
-                        <Select.Option value="2">2</Select.Option>
-                    </Select>
+                    <Form.Item name="select">
+                        <Select placeholder="uyuqw" value={val}>
+                            <Select.Option value="1">测试</Select.Option>
+                            <Select.Option value="2">测试1</Select.Option>
+                            <Select.Option value="3">测试2</Select.Option>
+                            <Select.Option value="4">asd</Select.Option>
+                            <Select.Option value="5">sdfdf</Select.Option>
+                            <Select.Option value="6">asd</Select.Option>
+                            <Select.Option value="7">vsdsd</Select.Option>
+                            <Select.Option value="8">ljoiy</Select.Option>
+                        </Select>
+                    </Form.Item>
                     <Form.Item name="account.code">
                         <Input type='text' placeholder="asds" size="middle" />
                     </Form.Item>
