@@ -1,77 +1,50 @@
-import React, { useCallback, useEffect, useMemo, useLayoutEffect, useState } from 'react';
+import React, { useMemo } from 'react';
 import ReactDOM from 'react-dom';
-import { flip, offset, shift, useFloating } from '@floating-ui/react-dom';
+import { isArray } from '@frade-sam/samtools';
 import { SelectBaseProps } from './interface';
 import { OptionBox, Option } from './Option';
 import { SelectInputStyled, SelectStyled } from './styles';
-import { isArray } from '@frade-sam/samtools';
+import { usePosition, useSearch, useSelect } from './hooks';
+import { useClickAwayListener } from 'src/common/hooks';
 
 export interface SelectProps extends SelectBaseProps {
-    onChange?: (value: any) => void;
     children?: JSX.Element | JSX.Element[];
 }
 
-export function Select({ size = 'middle', onChange: _onChange, children, ..._props }: SelectProps) {
-    const [visible, setVisible] = useState(false);
-    const [show, setShow] = useState(false);
-    const { refs, reference, floating, strategy, update, x, y } = useFloating({
-        placement: 'bottom-start',
-        strategy: 'fixed',
-        middleware: [offset(8), shift(), flip()],
-    });
+export function Select({ 
+    children, 
+    fetch,
+    onChange: _onChange, 
+    value:_value, 
+    size = 'middle', 
+    options:_options = [], 
+    ..._props 
+}: SelectProps) {
     const items = useMemo(() => {
-        if(React.isValidElement(children) || !isArray(children)) return [];
-        if(React.isValidElement(children)) return [children].filter((item: JSX.Element) => item.type === Option);
+        if (React.isValidElement(children) || !isArray(children)) return [];
+        if (React.isValidElement(children)) return [children].filter((item: JSX.Element) => item.type === Option);
         return children.filter((item) => item.type === Option);
     }, [children]);
-
-    const value = useMemo(() => {
-        return items.find((item) => item.props.value == _props.value)?.props.children || '';
-    },[_props.value, items]);
-
-    const onClick = useCallback(() => {
-        if(!visible) { setVisible(true); } else {
-            setShow(!show);
-        }
-    }, [visible, show]);
-
-    const onChange = useCallback((e) => {
-        _onChange(e);
-        setShow(false);
-    }, [show, _onChange]);
-
-    useEffect(() => {
-        if (!refs.reference || !refs.reference.current) return;
-        window.addEventListener('scroll', update);
-        window.addEventListener('resize', update);
-        return () => {
-            window.removeEventListener('scroll', update);
-            window.removeEventListener('resize', update);
-        };
-    }, [refs.reference.current, update]);
-
-
-    useLayoutEffect(() => {
-        if(visible) {
-            setShow(true);
-        }
-    }, [visible]);
-
+    const data = useMemo(() => items.length ? items.map((item) => ({ name: item.props.children, value: item.props.value })) : _options, [items, _options]);
+    const { name, value, visible, show, close, onClick, onChange } = useSelect(_value, {
+        onChange: _onChange,
+        options: data,
+    });
+    const {loading, options, onSearch} = useSearch({ options: data, fetch });
+    const [reference, floating, refs, styles] = usePosition();
+    useClickAwayListener([refs.reference,refs.floating],close);
     return (
         <React.Fragment>
-            <SelectStyled size={size} onClick={onClick} ref={reference} {..._props}>
-                <SelectInputStyled value={value} placeholder={_props.placeholder} disabled />
+            <SelectStyled size={size} onClick={onClick} ref={reference as any} {..._props}>
+                <SelectInputStyled value={name} placeholder={_props.placeholder} disabled />
             </SelectStyled>
             {visible && ReactDOM.createPortal(
                 <OptionBox
                     show={show}
-                    ref={floating}
-                    value={_props.value}
-                    width={refs.reference?.current?.getBoundingClientRect().width}
-                    position={strategy}
-                    top={y ?? 0}
-                    left={x ?? 0}
+                    ref={floating as any}
+                    value={value}
                     onChange={onChange}
+                    {...styles}
                 >
                     {items}
                 </OptionBox>,

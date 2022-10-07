@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { InputBaseProps } from '../interface';
-import { inputBgColor, inputBorder, inputBorderRadius, inputBorderSize } from './function';
+import { inputBgColor, inputBorder, inputBorderRadius, inputFontSize } from './function';
 
 
 export const InputContainerStyled = styled.div<InputBaseProps>`
@@ -15,7 +15,7 @@ export const InputContainerStyled = styled.div<InputBaseProps>`
   flex-direction: row;
   position: relative;
   & input {
-    font-size: ${inputBorderSize}px;
+    font-size: ${inputFontSize}px;
   }
 `;
 

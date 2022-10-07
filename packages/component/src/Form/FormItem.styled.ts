@@ -1,4 +1,4 @@
-import { FieldProps } from 'src/common/interface';
+import { FieldProps } from 'src/common/interfaces';
 import styled from 'styled-components';
 
 

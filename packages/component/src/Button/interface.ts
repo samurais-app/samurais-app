@@ -1,4 +1,4 @@
-import { Size } from 'src/common/interface';
+import { Size } from 'src/common/interfaces';
 
 export enum borderRadiusSize {
     small = 14,

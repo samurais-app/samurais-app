@@ -13,8 +13,8 @@ export interface ThemeContextProps {
 
 const Global = createGlobalStyle<ThemedStyledProps<any,Theme>>`
     ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
+        width: 5px;
+        height: 5px;
     }
     ::-webkit-scrollbar-thumb {
         background-color: ${props => complementaryColor(props.theme.color.background)};

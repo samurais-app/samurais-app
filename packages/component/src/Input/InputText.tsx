@@ -14,7 +14,7 @@ export function InputText(props: InputTextProps) {
         onChange,
         ..._props 
     } = props;
-    const _change = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
+    const _change = useCallback((event) => {
         if(typeof onChange !== 'function') return;
         if(props.maxLength && event.target.value.length>props.maxLength) {
             event.target.value = props.value as unknown as string;

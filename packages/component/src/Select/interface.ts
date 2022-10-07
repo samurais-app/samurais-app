@@ -1,17 +1,23 @@
 import { Strategy } from '@floating-ui/react-dom';
-import { Size } from 'src/common/interface';
+import { FieldProps, Size } from 'src/common/interfaces';
 export interface Option {
     name: string;
-    key: string| number;
+    key?: string| number;
     value: string | number | any;
 }
 
-export interface SelectBaseProps extends Pick<React.InputHTMLAttributes<HTMLInputElement>, 'placeholder'> {
-    value?: any;
+export interface SearchParams {
+    page?: number;
+    size?: number;
+    search?: string;
+};
+
+export interface SelectBaseProps extends Pick<React.InputHTMLAttributes<HTMLInputElement>, 'placeholder'>, FieldProps {
     options?: Option[];
     multiple?:boolean;
     size?: keyof typeof Size;
     error?: string;
+    fetch?:(params:SearchParams) => Promise<Option[]>
 }
 
 export interface OptionBoxBaseProps extends Omit<React.InputHTMLAttributes<HTMLDivElement>, 'width' | 'position' | 'top' | 'left' | 'onChange'> {

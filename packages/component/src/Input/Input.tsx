@@ -35,7 +35,7 @@ export default function Input(props: InputProps) {
         ..._props 
     } = props;
     const Com = Components[props.type];
-    const _onChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
+    const _onChange = useCallback((event) => {
         if(!isFunc(onChange) || !isFunc(Funcs[type])) return;
         const func = Funcs[type];
         func(event, props);

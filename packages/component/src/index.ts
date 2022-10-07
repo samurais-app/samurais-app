@@ -4,3 +4,4 @@ export * from './Button';
 export * from './theme';
 export * from './AppBar';
 export * from './Select';
+export * from './Check';

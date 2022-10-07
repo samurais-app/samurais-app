@@ -15,11 +15,8 @@ export const SelectStyled = styled.div<SelectBaseProps>`
     flex-direction: row;
     position: relative;
     & input {
-        border: none;
-        background-color: transparent;
-        letter-spacing: 1px;
-        appearance: textfield;
         font-size: ${selectBorderSize}px;
+        line-height: ${selectBorderSize}px;
     }
     & input::-webkit-outer-spin-button, & input::-webkit-inner-spin-button {
         appearance: none;
@@ -33,4 +30,9 @@ export const SelectStyled = styled.div<SelectBaseProps>`
     };
 `;
 
-export const SelectInputStyled = styled.input``;
+export const SelectInputStyled = styled.input`
+    border: none;
+    background-color: transparent;
+    letter-spacing: 1px;
+    appearance: textfield;
+`;

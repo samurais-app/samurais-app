@@ -13,7 +13,7 @@ export function InputNumber(props: InputNumberProps) {
         onChange,
         ..._props 
     } = props;
-    const _change = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
+    const _change = useCallback((event) => {
         if(typeof onChange !== 'function') return;
         if(!/(^[\-0-9][0-9]*(\.[0-9]+|\.)?)$/.test(event.target.value)) {
             event.target.value = '';

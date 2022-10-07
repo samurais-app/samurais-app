@@ -1,5 +1,5 @@
 import { color } from '@frade-sam/samtools';
-import { Size } from 'src/common/interface';
+import { Size } from 'src/common/interfaces';
 import { DefaultTheme, Theme } from 'src/theme';
 import { ThemedStyledProps } from 'styled-components';
 import { ButtonBaseProps } from '../interface';
