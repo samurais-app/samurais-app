@@ -21,6 +21,7 @@ export function InputText(props: InputTextProps) {
         }
         onChange(event);
     }, [_props.value]);
+
     return (
         <InputContainerStyled size={size} error={error}>
             <InputStyled onChange={_change} {..._props} />

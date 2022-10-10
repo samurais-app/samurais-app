@@ -8,6 +8,11 @@ export function inputBorder(props: ThemedStyledProps<InputBaseProps,Theme>) {
     return props.error ? props.theme.color.error : props.theme.color.transparent;
 }
 
+export function inputPadding(props: ThemedStyledProps<InputBaseProps,Theme>) {
+    const theme = props.theme ?? DefaultTheme;
+    return `${theme.spacing.padding[0]}px ${theme.spacing.padding[1]}px`;
+}
+
 export function inputFontSize(props: ThemedStyledProps<InputBaseProps,Theme>) { return props.theme.spacing.fontSize[Size[props.size]];}
 
 export function inputBorderRadius(props: ThemedStyledProps<InputBaseProps,Theme>) {

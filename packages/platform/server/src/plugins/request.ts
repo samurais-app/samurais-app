@@ -32,7 +32,6 @@ export default fp(async function (instance: FastifyInstance) {
     });
 
     instance.addHook('preSerialization', async (req, res, payload) => {
-        console.log('[payload]', payload);
         return payload;
     });
 

@@ -21,4 +21,7 @@ export const LoginBoxStyled = styled.div`
   box-shadow: 0px 0px 10px 2px #dddddd52;
   display: flex;
   flex-direction: row;
+  & > form {
+    width: 100%;
+  }
 `;

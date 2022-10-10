@@ -1,9 +1,9 @@
 import { useRef } from 'react';
 import Form from './Form';
-import { FormStore, FormStoreOption } from './store';
+import { FormContext, FormContextOption } from './store';
 
-export function useForm<T = any>(options: Omit<FormStoreOption<T>, 'name'>) {
+export function useForm<T = any>(options: Omit<FormContextOption<T>, 'name'>):[Pick<FormContext<T>, 'getContext'>] {
     const name = useRef(Form.getKey());
-    const form = new FormStore({ ...options, name: name.current});
+    const form = new FormContext({ ...options, name: name.current});
     return [form];
 }

@@ -2,11 +2,11 @@ import { complementaryColor, opacity } from '@frade-sam/samtools';
 import { Size } from 'src/common/interfaces';
 import { DefaultTheme, Theme } from 'src/theme';
 import { ThemedStyledProps } from 'styled-components';
-import { CheckBaseProps } from '../interface';
+import { CheckBaseProps, CheckGroupBaseProps } from '../interface';
 
 
 export function checkTextSpacing(props: ThemedStyledProps<CheckBaseProps,Theme>) {
-    return props.theme.spacing.padding[0];
+    return props.theme.spacing.spacing[1];
 }
 
 export function checkSize(props: ThemedStyledProps<CheckBaseProps,Theme>) {
@@ -29,4 +29,9 @@ export function checkActiveColor(props: ThemedStyledProps<CheckBaseProps,Theme>)
 export function checkBorderRadius(props: ThemedStyledProps<CheckBaseProps,Theme>) {
     if(!props.theme.borderRadius) return 0;
     return props.theme && props.theme.spacing ? props.theme.spacing.radius[0] : DefaultTheme.spacing.radius[0];
+}
+
+export function checkGroupItemMargin(props: ThemedStyledProps<CheckGroupBaseProps,Theme>) {
+    const theme = props.theme ?? DefaultTheme;
+    return theme.spacing.spacing[2];
 }

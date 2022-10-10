@@ -5,3 +5,5 @@ export * from './theme';
 export * from './AppBar';
 export * from './Select';
 export * from './Check';
+export * from './Avatar';
+export * from './common/log';

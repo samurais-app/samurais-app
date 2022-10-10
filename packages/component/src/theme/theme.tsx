@@ -26,7 +26,6 @@ const Global = createGlobalStyle<ThemedStyledProps<any,Theme>>`
         height: 100vh;
         background-color: ${props => props.theme.color.background};
         overflow: overlay;
-        font-size: 12px;
     }
     #app {
         margin: 0;

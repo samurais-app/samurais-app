@@ -1,4 +1,4 @@
-import React, {  } from 'react';
+import React from 'react';
 import { Form, Input, Button, Select, Check } from '@samurais-app/components';
 import { LoginBoxStyled, LoginStyled } from './login.styled';
 
@@ -11,6 +11,10 @@ export default function Login() {
         }
     });
 
+    const v = Form.useWatch('select', form);
+    const na = Form.useWatch('sdsd', form);
+    const num = Form.useWatch('codenumber', form);
+    console.log(v, na, num);
     return (
         <LoginStyled>
             <LoginBoxStyled>
@@ -28,7 +32,10 @@ export default function Login() {
                         </Select>
                     </Form.Item>
                     <Form.Item name="sdsd">
-                        <Check>1</Check>
+                        <Check.Group>
+                            <Check>测试选项</Check>
+                            <Check>这是</Check>
+                        </Check.Group>
                     </Form.Item>
                     <Form.Item name="account.code">
                         <Input type='text' placeholder="asds" size="middle" />
@@ -37,11 +44,9 @@ export default function Login() {
                         <Input type='text' placeholder="asds111" size="middle" />
                     </Form.Item>
                     <Form.Item name="codenumber">
-                        <Input type='number' placeholder="asds111ssd" size="middle" onChange={(e) => {
-                            console.log(e);
-                        }} />
+                        <Input type='number' placeholder="asds111ssd" size="middle"/>
                     </Form.Item>
-                    <Button size='small'>alshkksjdgasjh</Button>
+                    <Button size='middle'>alshkksjdgasjh</Button>
                 </Form>
             </LoginBoxStyled>
         </LoginStyled>

@@ -1,8 +1,7 @@
 import Field from './field';
 import { FieldContext } from './context';
 
-export type OmitType = 'change' | 'error' | 'focus';
-export type EventsType = 'dependent' | 'change' | 'error' | 'focus';
+export type EventsType = 'change' | 'error' | 'focus';
 
 export type Events = {
     type: EventsType;
@@ -27,8 +26,12 @@ export interface Rule {
 }
 export type FieldOption = {
     name: string;
-    value: string;
-    focus: boolean; // 是否处在获取焦点的情况
-    rules: Rule[];
-    dependent: string[];
+    value?: string;
+    focus?: boolean; // 是否处在获取焦点的情况
+    rules?: Rule[];
+}
+
+export type FormContextOption<T = any> = {
+    name: string;
+    onSubmit: (data: T) => void;
 }

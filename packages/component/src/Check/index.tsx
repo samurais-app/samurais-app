@@ -1,5 +1,6 @@
 import { isFunc } from '@frade-sam/samtools';
-import React, { useMemo, useCallback } from 'react';
+import React, { useCallback } from 'react';
+import { CheckGroup } from './group';
 import { CheckBaseProps } from './interface';
 import { CheckBox, CheckBoxContainer, CheckText } from './styles';
 
@@ -7,25 +8,19 @@ export interface CheckProps extends CheckBaseProps {
     children?: string;
 }
 
-export function Check({children, value, onChange, multiple = false, size = 'middle'}:Omit<CheckProps, 'active'>) {
-    const _value = useMemo(() => {
-        if(!multiple) return !!value;
-        return value == children;
-    }, [value, multiple, children]);
+export function Check({children, value = false, onChange, multiple = false, size = 'middle'}:Omit<CheckProps, 'active'>) {
 
     const onClick = useCallback((event) => {
         if(!isFunc(onChange)) return;
-        if(!multiple) {
-            event.target.value = Number(!_value);
-        } else {
-            event.target.value = _value ? '' : _value;
-        }
+        event.target.value = Number(!value);
         onChange(event);
-    },[_value, onChange]);
+    },[value, onChange]);
     return (
         <CheckBoxContainer value={value} onClick={onClick}>
-            <CheckBox size={size} multiple={multiple} active={_value} />
+            <CheckBox size={size} multiple={multiple} active={value} />
             {children? <CheckText size={size}>{children}</CheckText> : null}
         </CheckBoxContainer>
     );
 }
+
+Check.Group = CheckGroup;

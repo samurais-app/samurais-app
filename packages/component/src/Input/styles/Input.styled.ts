@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { InputBaseProps } from '../interface';
-import { inputBgColor, inputBorder, inputBorderRadius, inputFontSize } from './function';
+import { inputBgColor, inputBorder, inputBorderRadius, inputFontSize, inputPadding } from './function';
 
 
 export const InputContainerStyled = styled.div<InputBaseProps>`
   box-sizing: border-box;
   width: 100%;
   background-color: ${inputBgColor};
-  padding: 6px 8px;
+  padding: ${inputPadding};
   border-radius: ${inputBorderRadius}px;
   border: 1px solid ${inputBorder};
   transition: all 0.2s ease 0s;

@@ -1,12 +1,14 @@
-import React from 'react';
-import { FormContext } from './store/context';
+import React, { createContext } from 'react';
+import { FormContext } from './store';
 import { FormStyled } from './Form.styled';
 import { FormItem } from './FormItem';
-import { FormStore } from './store';
 import { useForm } from './useForm';
+import { useWatch } from './useWatch';
 
-export type FormProps<D = any> = {
-    form: FormStore<D>;
+export const Context = createContext({});
+
+export interface FormProps<D = any> extends Omit<React.FormHTMLAttributes<HTMLFormElement>, 'onSubmit' | 'form'> {
+    form: Pick<FormContext<D>, 'getContext'>;
     children: JSX.Element | JSX.Element[];
 }
 
@@ -14,22 +16,26 @@ Form.getKey = function () {
     return new Date().getTime().toString();
 };
 
-export default function Form(props: FormProps) {
-    const { children, form } = props;
+export default function Form({
+    form,
+    children,
+    ...props
+}: FormProps) {
 
     function onSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
-        form.verification();
+        (form as unknown as Pick<FormContext, 'getContext' | 'verification'>).verification();
     }
 
     return (
-        <FormStyled onSubmit={onSubmit}>
-            <FormContext.Provider value={{ form }}>
+        <FormStyled {...props} onSubmit={onSubmit}>
+            <Context.Provider value={{ form }}>
                 {children}
-            </FormContext.Provider>
+            </Context.Provider>
         </FormStyled>
     );
 }
 
 Form.Item = FormItem;
 Form.useForm = useForm;
+Form.useWatch = useWatch;

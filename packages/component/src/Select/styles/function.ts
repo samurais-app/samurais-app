@@ -4,6 +4,10 @@ import { DefaultTheme, Theme } from 'src/theme';
 import { ThemedStyledProps } from 'styled-components';
 import { OptionBaseProps, OptionBoxBaseProps, SelectBaseProps } from '../interface';
 
+export function selectPadding(props: ThemedStyledProps<SelectBaseProps,Theme>) {
+    const theme = props.theme ?? DefaultTheme;
+    return `${theme.spacing.padding[0]}px ${theme.spacing.padding[1]}px`;
+}
 
 export function selectBorderRadius(props: ThemedStyledProps<SelectBaseProps,Theme>) {
     if(!props.theme.borderRadius) return 0;

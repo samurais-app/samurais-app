@@ -10,6 +10,7 @@ export const ButtonStyled = styled.button<ButtonBaseProps>`
   padding: ${padding};
   border-radius: ${buttonBorderRadius}px;
   transition: background-color 0.2s ease 0s;
+  outline: none;
   &:hover {
     background-color: ${backgroundColor(0.2)};
   }

@@ -1,15 +1,13 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import { FieldOption, OmitType, Rule } from './interface';
+import { EventsType, FieldOption, Rule } from './interface';
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 
 export default class Field {
-    constructor(private _field: Omit<FieldOption, 'dependent'>) {
-        this._field.rules = this.initialVerification(this._field.rules);
-    }
+    constructor(private _field: FieldOption) {}
 
-    emit(event: OmitType, field: Field) { }
+    emit(event: EventsType, field: Field) { }
 
 
     private _error = '';
@@ -36,6 +34,9 @@ export default class Field {
 
     get rules() {
         return this._field.rules || [];
+    }
+    set rules(rules: Rule[]) {
+        this._field.rules = this.initialVerification(rules);
     }
 
     private initialVerification(rules?: Rule[]) {
@@ -73,7 +74,7 @@ export default class Field {
         });
     }
 
-    update(_field: Omit<FieldOption, 'dependent'>) {
+    update(_field: Omit<FieldOption, 'name'>) {
         this._field = { ...this._field, ..._field };
     }
 }
