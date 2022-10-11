@@ -20,13 +20,14 @@ export function inputFontSize(props: ThemeWithInputBaseProps) {
     return `${size}${theme.unit}`;
 }
 
-export function inputBorderRadius(props: ThemeWithInputBaseProps) {
-    const theme = props.theme ?? DefaultTheme;
-    if(!props.theme.borderRadius) return 0;
+export function inputBorderRadius(props?: ThemeWithInputBaseProps) {
+    const theme = props?.theme ?? DefaultTheme;
+    if(!theme.borderRadius) return 0;
     const size = theme.mobile ? theme.spacing.radius[0]/theme.size : theme.spacing.radius[0];
     return `${size}${theme.unit}`;
 }
 
-export function inputBgColor(props: ThemeWithInputBaseProps) {
-    return opacity(complementaryColor(props.theme.color.background), 0.05);
+export function inputBgColor(props?: ThemeWithInputBaseProps) {
+    const theme = props?.theme ?? DefaultTheme;
+    return opacity(complementaryColor(theme.color.background), 0.05);
 }

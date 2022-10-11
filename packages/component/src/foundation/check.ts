@@ -1,8 +1,8 @@
 import { complementaryColor, opacity } from '@frade-sam/samtools';
-import { Size } from 'src/common/interfaces';
-import { mobileSize, mobileUnit } from 'src/common/utils';
-import { ThemeWithCheckBaseProps, ThemeWithCheckGroupBaseProps } from 'src/interfaces';
-import { DefaultTheme } from 'src/theme';
+import { Size } from '../common/interfaces';
+import { mobileSize, mobileUnit } from '../common/utils';
+import { ThemeWithCheckBaseProps, ThemeWithCheckGroupBaseProps } from '../interfaces';
+import { DefaultTheme } from '../theme';
 
 
 export function checkTextSpacing(props: ThemeWithCheckBaseProps) {
