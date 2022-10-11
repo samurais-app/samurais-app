@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
-import { InputStyled, InputContainerStyled } from './styles';
-import { InputBaseProps } from './interface';
+import { InputStyled, InputContainerStyled } from './input.styled';
+import { InputBaseProps } from 'src/interfaces';
 
 export interface InputNumberProps extends InputBaseProps {
     type?: 'number';

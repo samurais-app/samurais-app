@@ -1,7 +1,7 @@
 import { flip, offset, ReferenceType, shift, Strategy, useFloating } from '@floating-ui/react-dom';
 import { isFunc } from '@frade-sam/samtools';
 import { useCallback, useEffect, useLayoutEffect, useMemo, useState } from 'react';
-import { Option, SearchParams, SelectBaseProps } from './interface';
+import { Option, SearchParams, SelectBaseProps } from 'src/interfaces';
 
 
 

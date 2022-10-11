@@ -1,8 +1,8 @@
 import { isArray, isFunc, isUndefined } from '@frade-sam/samtools';
 import React, { useCallback, useMemo } from 'react';
 import { Check } from '.';
-import { CheckGroupBaseProps } from './interface';
-import { CheckGroupStyled } from './styles';
+import { CheckGroupBaseProps } from 'src/interfaces';
+import { CheckGroupStyled } from './group.styled';
 
 export interface CheckGroupProps extends CheckGroupBaseProps {
     children?: JSX.Element[] | JSX.Element;

@@ -1,6 +1,9 @@
 import { Theme } from './interface';
 
 const themeConfig:Theme = {
+    size: 10,
+    unit: 'px',
+    mobile: false,
     borderRadius: true,
     color: {
         primary: '#0A992E',

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { checkGroupItemMargin } from './function';
+import { checkGroupItemMargin } from 'src/foundation';
 
 
 export const CheckGroupStyled = styled.div`

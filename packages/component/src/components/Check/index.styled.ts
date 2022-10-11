@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { checkActiveColor, checkBgColor, checkBorder, checkBorderRadius, checkSize, checkTextSpacing } from './function';
+import { checkActiveColor, checkBgColor, checkBorder, checkBorderRadius, checkSize, checkTextSpacing } from 'src/foundation';
 
 
 export const CheckBoxContainer = styled.div<any>`

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { InputBaseProps } from '../interface';
-import { inputBgColor, inputBorder, inputBorderRadius, inputFontSize, inputPadding } from './function';
+import { InputBaseProps } from 'src/interfaces';
+import { inputBgColor, inputBorder, inputBorderRadius, inputFontSize, inputPadding } from 'src/foundation';
 
 
 export const InputContainerStyled = styled.div<InputBaseProps>`
@@ -8,14 +8,14 @@ export const InputContainerStyled = styled.div<InputBaseProps>`
   width: 100%;
   background-color: ${inputBgColor};
   padding: ${inputPadding};
-  border-radius: ${inputBorderRadius}px;
+  border-radius: ${inputBorderRadius};
   border: 1px solid ${inputBorder};
   transition: all 0.2s ease 0s;
   display: flex;
   flex-direction: row;
   position: relative;
   & input {
-    font-size: ${inputFontSize}px;
+    font-size: ${inputFontSize};
   }
 `;
 

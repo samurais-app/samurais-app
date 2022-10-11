@@ -1,4 +1,6 @@
 import { FieldProps, Size } from 'src/common/interfaces';
+import { Theme } from 'src/theme';
+import { ThemedStyledProps } from 'styled-components';
 
 export type InputType = 'text' | 'number' | 'password'
 
@@ -6,3 +8,5 @@ export interface InputBaseProps extends Omit<React.InputHTMLAttributes<HTMLInput
     type?: InputType;
     size?: keyof typeof Size;
 }
+
+export type ThemeWithInputBaseProps = ThemedStyledProps<InputBaseProps,Theme>;

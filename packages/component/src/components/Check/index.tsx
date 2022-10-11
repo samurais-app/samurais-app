@@ -1,8 +1,8 @@
 import { isFunc } from '@frade-sam/samtools';
 import React, { useCallback } from 'react';
 import { CheckGroup } from './group';
-import { CheckBaseProps } from './interface';
-import { CheckBox, CheckBoxContainer, CheckText } from './styles';
+import { CheckBaseProps } from 'src/interfaces';
+import { CheckBox, CheckBoxContainer, CheckText } from './index.styled';
 
 export interface CheckProps extends CheckBaseProps {
     children?: string;

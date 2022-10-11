@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { SelectBaseProps } from '../interface';
-import { selectBgColor, selectBorder, selectBorderRadius, selectBorderSize, selectPadding } from './function';
+import { SelectBaseProps } from 'src/interfaces';
+import { selectBgColor, selectBorder, selectBorderRadius, selectFontSize, selectPadding } from 'src/foundation';
 
 
 export const SelectStyled = styled.div<SelectBaseProps>`
@@ -8,15 +8,15 @@ export const SelectStyled = styled.div<SelectBaseProps>`
     width: 100%;
     background-color: ${selectBgColor};
     padding: ${selectPadding};
-    border-radius: ${selectBorderRadius}px;
+    border-radius: ${selectBorderRadius};
     border: 1px solid ${selectBorder};
     transition: all 0.2s ease 0s;
     display: flex;
     flex-direction: row;
     position: relative;
     & input {
-        font-size: ${selectBorderSize}px;
-        line-height: ${selectBorderSize}px;
+        font-size: ${selectFontSize};
+        line-height: ${selectFontSize};
     }
     & input::-webkit-outer-spin-button, & input::-webkit-inner-spin-button {
         appearance: none;

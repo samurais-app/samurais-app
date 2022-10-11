@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react';
 import ReactDOM from 'react-dom';
 import { isArray } from '@frade-sam/samtools';
-import { SelectBaseProps } from './interface';
-import { OptionBox, Option } from './Option';
-import { SelectInputStyled, SelectStyled } from './styles';
+import { SelectBaseProps } from 'src/interfaces';
+import { OptionBox, Option } from './option';
+import { SelectInputStyled, SelectStyled } from './index.styled';
 import { usePosition, useSearch, useSelect } from './hooks';
 import { useClickAwayListener } from 'src/common/hooks';
 
@@ -40,6 +40,7 @@ export function Select({
             </SelectStyled>
             {visible && ReactDOM.createPortal(
                 <OptionBox
+                    size={size}
                     show={show}
                     ref={floating as any}
                     value={value}

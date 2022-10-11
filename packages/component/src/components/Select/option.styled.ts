@@ -1,7 +1,7 @@
 import { Theme } from 'src/theme';
 import styled, { ThemedStyledProps } from 'styled-components';
-import { OptionBaseProps, OptionBoxBaseProps } from '../interface';
-import { optionBoxBorderRadius, optionPadding, optionBoxShow, optionBackground } from './function';
+import { OptionBaseProps, OptionBoxBaseProps } from 'src/interfaces';
+import { optionBoxBorderRadius, optionPadding, optionBoxShow, optionBackground, selectFontSize } from 'src/foundation';
 
 export const OptionBoxStyled = styled.div<ThemedStyledProps<OptionBoxBaseProps, Theme>>`
   width: ${(props: OptionBoxBaseProps) => props.width}px;
@@ -14,7 +14,7 @@ export const OptionBoxStyled = styled.div<ThemedStyledProps<OptionBoxBaseProps, 
   margin: 0;
   background-color: #fff;
   box-shadow: 0 0 10px 4px ${optionBoxShow};
-  border-radius: ${optionBoxBorderRadius}px;
+  border-radius: ${optionBoxBorderRadius};
   transform-origin: 0 0;
   max-height: ${props => props.show ? 240 : 0}px;
   transform: scale(1, ${props => props.show ? 1 : 0});
@@ -35,6 +35,9 @@ export const OptionStyled = styled.li<ThemedStyledProps<OptionBaseProps, Theme>>
   padding: ${optionPadding};
   background-color: ${optionBackground()};
   transition: all 0.2s ease 0s;
+  font-size: ${selectFontSize};
+  line-height: ${selectFontSize};
+  cursor: pointer;
   &:hover {
     background-color: ${optionBackground('hover')};
   }
