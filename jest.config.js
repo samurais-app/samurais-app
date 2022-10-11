@@ -6,7 +6,8 @@ module.exports = {
     setupFiles: ['<rootDir>/jest-setup.js','jest-canvas-mock'],
     projects:
     [
-        '<rootDir>/packages/*/jest.config.js'
+        '<rootDir>/packages/*/jest.config.js',
+        '<rootDir>/packages/*/*/jest.config.js'
     ],
     coverageDirectory: '<rootDir>/coverage/'
 };
