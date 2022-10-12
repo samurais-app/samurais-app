@@ -9,6 +9,11 @@ module.exports = {
     moduleNameMapper: {
         '^src/(.*)$': '<rootDir>/src/$1',
     },
+    modulePathIgnorePatterns:[
+        '<rootDir>/src/__tests__',
+        '<rootDir>/node_modules',
+        '<rootDir>/build',
+    ],
     moduleDirectories: ['node_modules', 'src'],
     moduleFileExtensions: [
         'ts',

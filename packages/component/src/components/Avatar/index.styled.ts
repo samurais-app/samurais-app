@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { avatarBorderRadius, avatarSize, avatarTextMarginLeft } from 'src/foundation';
+import { ThemeWithAvatarBaseProps } from 'src/interfaces';
 
 
 export const AvatarStyled = styled.div`
@@ -8,7 +9,7 @@ export const AvatarStyled = styled.div`
     cursor: pointer;
 `;
 
-export const AvatarContainerStyled = styled.div`
+export const AvatarContainerStyled = styled.div<ThemeWithAvatarBaseProps>`
     width: ${avatarSize};
     height: ${avatarSize};
     border-radius: ${avatarBorderRadius};
