@@ -12,10 +12,10 @@ export const CheckBox = styled.b`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: ${checkSize}px;
-    height: ${checkSize}px;
+    width: ${checkSize};
+    height: ${checkSize};
     background-color: ${checkBgColor};
-    border-radius: ${checkBorderRadius}px;
+    border-radius: ${checkBorderRadius};
     border: 1px solid ${checkBorder};
     transition: all 0.2s ease 0s;
     padding: 2px;
@@ -26,11 +26,11 @@ export const CheckBox = styled.b`
         height:${props => props.active ? '100%' : '0%'};
         background-color: ${checkActiveColor};
         transition: all 0.2s ease 0s;
-        border-radius: ${checkBorderRadius}px;
+        border-radius: ${checkBorderRadius};
     }
 `;
 
 export const CheckText = styled.span`
     display: inline-block;
-    margin-left: ${checkTextSpacing}px;
+    margin-left: ${checkTextSpacing};
 `;

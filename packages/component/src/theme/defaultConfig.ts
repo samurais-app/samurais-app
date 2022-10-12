@@ -5,6 +5,9 @@ const themeConfig:Theme = {
     unit: 'px',
     mobile: false,
     borderRadius: true,
+    Size: function(num: number) {
+        return this.mobile ? num / this.size : num;
+    },
     color: {
         primary: '#0A992E',
         transparent: 'transparent',

@@ -10,11 +10,3 @@ export function isMobile() {
 
     return isPad || isIphone || isMoto || isSamsung || isUcWeb || isAndroid;
 }
-
-export function mobileSize(num: number, size: number,ismobile: boolean) {
-    return ismobile ? num / size : num;
-}
-
-export function mobileUnit(ismobile: boolean) {
-    return ismobile ? 'rem' : 'px';
-}

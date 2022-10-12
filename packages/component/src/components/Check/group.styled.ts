@@ -8,7 +8,7 @@ export const CheckGroupStyled = styled.div`
     flex-wrap: nowrap;
 
     & > div {
-        margin-right: ${checkGroupItemMargin}px;
+        margin-right: ${checkGroupItemMargin};
     }
     & > div:last-child {
         margin-right: unset;

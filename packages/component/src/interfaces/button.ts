@@ -1,4 +1,6 @@
 import { Size } from 'src/common/interfaces';
+import { ThemedStyledProps } from 'styled-components';
+import { Theme } from 'src/theme';
 
 export enum borderRadiusSize {
     small = 14,
@@ -7,5 +9,8 @@ export enum borderRadiusSize {
 }
 
 export interface ButtonBaseProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  size?: keyof typeof Size;
+    size?: keyof typeof Size;
 }
+
+
+export type ThemeWithButtonBaseProps = ThemedStyledProps<ButtonBaseProps, Theme>;

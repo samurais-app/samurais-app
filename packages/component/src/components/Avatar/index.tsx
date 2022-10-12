@@ -1,6 +1,6 @@
 import React from 'react';
-import { AvatarBaseProps } from './interface';
-import { AvatarContainerStyled, AvatarImageStyled, AvatarStyled, AvatarTextStyled } from './styles';
+import { AvatarBaseProps } from 'src/interfaces';
+import { AvatarContainerStyled, AvatarImageStyled, AvatarStyled, AvatarTextStyled } from './index.styled';
 
 
 export interface AvatarProps extends AvatarBaseProps {

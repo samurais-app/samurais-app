@@ -8,7 +8,7 @@ import { complementaryColor } from '@frade-sam/samtools';
 import { useMobile } from 'src/common/hooks';
 
 export interface ThemeContextProps {
-    theme?: Theme;
+    theme?: Omit<Theme, 'Size' | 'unit' | 'mobile'>;
     children: JSX.Element | JSX.Element;
 }
 

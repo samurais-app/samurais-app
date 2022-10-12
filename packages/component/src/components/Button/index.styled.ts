@@ -1,14 +1,14 @@
 import styled from 'styled-components';
-import { ButtonBaseProps } from '../interface';
-import { backgroundColor, buttonBorderRadius, padding } from './function';
+import { ButtonBaseProps } from 'src/interfaces';
+import { backgroundColor, buttonBorderRadius, buttonPadding } from 'src/foundation';
 
 
 export const ButtonStyled = styled.button<ButtonBaseProps>`
   background-color: ${backgroundColor()};
   border: none;
   cursor: pointer;
-  padding: ${padding};
-  border-radius: ${buttonBorderRadius}px;
+  padding: ${buttonPadding};
+  border-radius: ${buttonBorderRadius};
   transition: background-color 0.2s ease 0s;
   outline: none;
   &:hover {

@@ -1,7 +1,5 @@
-import { Theme } from 'src/theme';
-import styled, { ThemedStyledProps } from 'styled-components';
-import { AvatarBaseProps } from '../interface';
-import { avatarBorderRadius, avatarSize, avatarTextMarginLeft } from './function';
+import styled from 'styled-components';
+import { avatarBorderRadius, avatarSize, avatarTextMarginLeft } from 'src/foundation';
 
 
 export const AvatarStyled = styled.div`
@@ -10,7 +8,7 @@ export const AvatarStyled = styled.div`
     cursor: pointer;
 `;
 
-export const AvatarContainerStyled = styled.div<ThemedStyledProps<Pick<AvatarBaseProps, 'circular' | 'size'>, Theme>>`
+export const AvatarContainerStyled = styled.div`
     width: ${avatarSize};
     height: ${avatarSize};
     border-radius: ${avatarBorderRadius};

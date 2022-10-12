@@ -1,18 +1,17 @@
 import { complementaryColor, opacity } from '@frade-sam/samtools';
 import { Size } from '../common/interfaces';
-import { mobileSize, mobileUnit } from '../common/utils';
 import { ThemeWithCheckBaseProps, ThemeWithCheckGroupBaseProps } from '../interfaces';
 import { DefaultTheme } from '../theme';
 
 
 export function checkTextSpacing(props: ThemeWithCheckBaseProps) {
     const theme = props.theme ?? DefaultTheme;
-    return `${mobileSize(theme.spacing.spacing[1], theme.size, theme.mobile)}${mobileUnit(theme.mobile)}`;
+    return `${theme.Size(theme.spacing.spacing[1])}${theme.unit}`;
 }
 
 export function checkSize(props: ThemeWithCheckBaseProps) {
     const theme = props.theme ?? DefaultTheme;
-    return `${mobileSize(props.theme.spacing.spacing[Size[props.size] + 1], theme.size, theme.mobile)}${mobileUnit(theme.mobile)}`;
+    return `${theme.Size(theme.spacing.spacing[Size[props.size] + 1])}${theme.unit}`;
 }
 
 export function checkBgColor(props: ThemeWithCheckBaseProps) {
@@ -31,11 +30,12 @@ export function checkActiveColor(props: ThemeWithCheckBaseProps) {
 
 
 export function checkBorderRadius(props: ThemeWithCheckBaseProps) {
-    if(!props.theme.borderRadius) return 0;
-    return props.theme && props.theme.spacing ? props.theme.spacing.radius[0] : DefaultTheme.spacing.radius[0];
+    const theme = props.theme ?? DefaultTheme;
+    if(!theme.borderRadius) return 0;
+    return `${theme.Size(props.theme.spacing.radius[0])}${theme.unit}`;
 }
 
 export function checkGroupItemMargin(props: ThemeWithCheckGroupBaseProps) {
     const theme = props.theme ?? DefaultTheme;
-    return theme.spacing.spacing[2];
+    return `${theme.Size(theme.spacing.spacing[2])}${theme.unit}`;
 }

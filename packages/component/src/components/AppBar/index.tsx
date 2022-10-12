@@ -1,7 +1,8 @@
 import React from 'react';
+import { AppBarBaseProps } from 'src/interfaces';
+import { fixed } from 'src/foundation';
+import { AppBarStyled, AppHandlerStyled, AppLogoStyled, AppNavigationStyled } from './index.styled';
 import { useAppBarScroll } from './hooks';
-import { AppBarBaseProps } from './interface';
-import { AppBarStyled, AppHandlerStyled, AppLogoStyled, AppNavigationStyled, fixed } from './styles';
 
 export interface AppBarProps extends AppBarBaseProps {
   logo?: JSX.Element | string;

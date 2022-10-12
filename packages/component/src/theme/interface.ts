@@ -7,6 +7,8 @@ export interface ThemeColor {
     error?: string;
 }
 
+export type Size = (num: number) => number;
+
 
 export interface ThemeSpacing {
     fontSize?: [number, number, number, number, number],
@@ -20,6 +22,7 @@ export interface Theme {
     size?: number;
     mobile?: boolean;
     unit?: string;
+    Size?: Size;
     borderRadius?:boolean;
     color?: ThemeColor;
     spacing?: ThemeSpacing;

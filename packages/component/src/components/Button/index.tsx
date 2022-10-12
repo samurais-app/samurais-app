@@ -1,6 +1,6 @@
 import React from 'react';
-import { ButtonBaseProps } from './interface';
-import { ButtonStyled } from './styles';
+import { ButtonBaseProps } from 'src/interfaces';
+import { ButtonStyled } from './index.styled';
 
 export interface ButtonProps extends ButtonBaseProps {
   children: any;
