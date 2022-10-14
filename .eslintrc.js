@@ -19,14 +19,14 @@ module.exports = {
         '@typescript-eslint'
     ],
     'rules': {
-        "@typescript-eslint/ban-ts-comment": "off",
+        '@typescript-eslint/ban-ts-comment': 'off',
         'indent': [
             'error',
             4
         ],
         'linebreak-style': [
-            'error',
-            'unix'
+            0,
+            'error'
         ],
         'quotes': [
             'error',
@@ -36,7 +36,7 @@ module.exports = {
             'error',
             'always'
         ],
-        "no-useless-escape": "off",
+        'no-useless-escape': 'off',
         '@typescript-eslint/no-var-requires': 'off',
         '@typescript-eslint/interface-name-prefix': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',

@@ -1,14 +1,13 @@
+/* eslint-disable no-undef */
+const base = require('./jest.config.base.js');
+
 module.exports = {
-    transform: {
-        '^.+\\.tsx?$': 'ts-jest'
-    },
-    rootDir: '.',
+    ...base,
     setupFiles: ['<rootDir>/jest-setup.js','jest-canvas-mock'],
-    moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-    testEnvironment: 'jsdom',
-    testEnvironmentOptions: {
-        resources: 'usable',
-        runScripts: 'dangerously',
-    },
-    coveragePathIgnorePatterns: ['/node_modules/', '/build/'],
+    projects:
+    [
+        '<rootDir>/packages/*/jest.config.js',
+        '<rootDir>/packages/*/*/jest.config.js'
+    ],
+    coverageDirectory: '<rootDir>/coverage/'
 };

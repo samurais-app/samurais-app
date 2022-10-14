@@ -3,3 +3,4 @@ src/**/files/**
 test/**
 packages/schematics/**
 packages/plugins/**
+build

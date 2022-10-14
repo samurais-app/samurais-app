@@ -36,7 +36,9 @@
     "styled-components": "^5.3.5"
   },
   "dependencies": {
-    "@frade-sam/samtools": "1.0.23",
+    "@floating-ui/react-dom": "^1.0.0",
+    "@floating-ui/react-dom-interactions": "^0.10.1",
+    "@frade-sam/samtools": "1.1.4",
     "deepmerge": "^4.2.2"
   }
 }
