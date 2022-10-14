@@ -3,6 +3,45 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.0-beta.0](https://github.com/samurais-app/samurais-app/compare/v0.1.1...v0.2.0-beta.0) (2022-10-14)
+
+
+### 📦‍ Build System | 打包构建
+
+* **build:** appbar背景设置 ([478045c](https://github.com/samurais-app/samurais-app/commit/478045c14c15e01bab55abe82d16481630d9ac63))
+* **build:** build ([9a7aa7e](https://github.com/samurais-app/samurais-app/commit/9a7aa7e5d997ca128c54437c8b2586d301f29c1d))
+* **build:** log ([9e8ef41](https://github.com/samurais-app/samurais-app/commit/9e8ef41f3a39d6cbef65ae9dd421e5f16aa9e86e))
+* **test:** 测试在github action中的自动输出 ([401ca4a](https://github.com/samurais-app/samurais-app/commit/401ca4ad94707d26cc41718cf19b08195cef4219))
+* **测试log:** v0.0.2-beta.1 ([d47015f](https://github.com/samurais-app/samurais-app/commit/d47015f326d7cfa3aae576985569c4a1e1e587ae))
+
+
+### ✨ Features | 新功能
+
+* **custom:** check ([d80c406](https://github.com/samurais-app/samurais-app/commit/d80c406e00570a4baaa182f4471d97396fe96204))
+
+
+### ♻️ Code Refactoring | 代码重构
+
+* **custom:** form ([9dbb0a4](https://github.com/samurais-app/samurais-app/commit/9dbb0a417d7e0d530f54a90a2f1acd3569369dba))
+* **custom:** select ([1afba22](https://github.com/samurais-app/samurais-app/commit/1afba22222f3f06bb8d2a5fd898927b4b90ddf83))
+
+
+### 👷 Continuous Integration | CI 配置
+
+* **ci): ci(ci:** ci ([446a9c1](https://github.com/samurais-app/samurais-app/commit/446a9c141d6bfea9d24439ea1be711291353910a))
+* **ci:** changlog ([d6ffb86](https://github.com/samurais-app/samurais-app/commit/d6ffb8622ef1ca51e82ca5f1f9975d3bbc144f9c))
+* **ci:** ci ([7a74417](https://github.com/samurais-app/samurais-app/commit/7a744171a87f8cd144a8a6e514ceb04df9b18cbd))
+* **ci:** ci ([5ea1bdc](https://github.com/samurais-app/samurais-app/commit/5ea1bdc7361481e8d0c3777db528fb22b03dc663))
+* **ci:** ci ([ab7cf83](https://github.com/samurais-app/samurais-app/commit/ab7cf8388ae1dd79070f3aa476820f3e4868ad18))
+* **ci:** ci ([b3f7617](https://github.com/samurais-app/samurais-app/commit/b3f7617ea794e6e5dec4257762f63c307e01aa44))
+* **ci:** ci ([7145755](https://github.com/samurais-app/samurais-app/commit/7145755a647b7dd8128c1ef3c017317cc0a0a3d0))
+* **ci:** log ([30af18f](https://github.com/samurais-app/samurais-app/commit/30af18f79ae5dbca6afd1693ee76571e6b396e20))
+* **ci:** log build ([60460cc](https://github.com/samurais-app/samurais-app/commit/60460cc29971204337391ca14a7c58492d66ed1e))
+* **ci:** log流程 ([0e54d14](https://github.com/samurais-app/samurais-app/commit/0e54d146d17c03d489f629124887d685f2b736fb))
+* **custom:** eslint ([404967f](https://github.com/samurais-app/samurais-app/commit/404967fec8db0ba93365d85133beb824c218ff4e))
+
+
+
 ## [0.1.1](https://github.com/samurais-app/samurais-app/compare/v0.1.1-beta.0...v0.1.1) (2022-09-22)
 
 **Note:** Version bump only for package samurais
