@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { appBarBackground, appBarBlur, padding } from 'src/foundation';
+import { appBarBackground, appBarBlur, navigationPadding, padding } from 'src/foundation';
 
 export const AppBarStyled = styled.div`
     display: flex;
@@ -26,6 +26,7 @@ export const AppLogoStyled = styled.div`
 
 export const AppNavigationStyled = styled.div`
     flex: 1;
+    padding: ${navigationPadding};
 `;
 
 export const AppHandlerStyled = styled.div``;

@@ -28,4 +28,4 @@ export interface Theme {
     spacing?: ThemeSpacing;
 }
 
-export type ThemeWithAnyProps = ThemedStyledProps<any,Theme>;
+export type ThemeWithAnyProps<P = any> = ThemedStyledProps<P,Theme>;
