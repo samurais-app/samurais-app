@@ -5,17 +5,6 @@ on:
     branches:
       - dev
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Allow one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
 jobs:
   test:
     runs-on: ubuntu-22.04
@@ -54,30 +43,4 @@ jobs:
         run: npm run build
 
       - name: test
-        run: npm run test:coverage
-
-  coverage:
-    runs-on: ubuntu-22.04
-    name: coverage
-    needs: [test]
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: setup node ${{ matrix.node_version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16.12.0
-      - name: Setup Pages
-        uses: actions/configure-pages@v1
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          # Upload entire repository
-          path: './coverage/lcov-report'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+        run: npm run test
