@@ -1,16 +1,22 @@
 import { Theme } from './interface';
 
 const themeConfig:Theme = {
+    size: 10,
+    unit: 'px',
+    mobile: false,
     borderRadius: true,
+    Size: function(num: number) {
+        return this.mobile ? num / this.size : num;
+    },
     color: {
         primary: '#0A992E',
         transparent: 'transparent',
         error: '#fb1f6a',
-        background: '#0A992E'
+        background: '#FFFFFF'
     },
     spacing: {
         fontSize: [12,16,22,30,40],
-        spacing: [1,2,3,4,5],
+        spacing: [4,8,12,16,20],
         radius: [4,6,8,10,12],
         padding: [8,12,18,26,36]
     }

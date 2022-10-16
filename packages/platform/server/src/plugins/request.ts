@@ -32,12 +32,10 @@ export default fp(async function (instance: FastifyInstance) {
     });
 
     instance.addHook('preSerialization', async (req, res, payload) => {
-        console.log('[payload]', payload);
         return payload;
     });
 
     instance.addHook('onSend', async (req, res, payload: any) => {
-        console.log(payload);
         switch (res.statusCode) {
         case 500:
             return JSON.stringify({ code: res.statusCode, message: JSON.parse(payload).message });

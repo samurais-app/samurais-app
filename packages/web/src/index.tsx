@@ -1,6 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import { logger } from '@samurais-app/components';
 import { App } from './app';
-
-
-ReactDOM.render(<App />, document.getElementById('app'));
+logger('dev', '.....11231');
+const root = createRoot(document.getElementById('app'));
+root.render(<App />);

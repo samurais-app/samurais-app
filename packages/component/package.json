@@ -1,6 +1,6 @@
 {
   "name": "@samurais-app/components",
-  "version": "0.1.1",
+  "version": "0.2.0-beta.0",
   "description": "> TODO: description",
   "author": "刘伟 <lemonpaimc@126.com>",
   "homepage": "https://github.com/samurais-app/samurais-app/tree/main/packages/component#readme",
@@ -36,7 +36,9 @@
     "styled-components": "^5.3.5"
   },
   "dependencies": {
-    "@frade-sam/samtools": "1.0.23",
+    "@floating-ui/react-dom": "^1.0.0",
+    "@floating-ui/react-dom-interactions": "^0.10.1",
+    "@frade-sam/samtools": "1.1.4",
     "deepmerge": "^4.2.2"
   }
 }

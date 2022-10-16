@@ -1,3 +1,4 @@
+import { ThemedStyledProps } from 'styled-components';
 
 export interface ThemeColor {
     primary?: string;
@@ -5,6 +6,8 @@ export interface ThemeColor {
     transparent?: string;
     error?: string;
 }
+
+export type Size = (num: number) => number;
 
 
 export interface ThemeSpacing {
@@ -16,7 +19,13 @@ export interface ThemeSpacing {
 
 
 export interface Theme {
+    size?: number;
+    mobile?: boolean;
+    unit?: string;
+    Size?: Size;
     borderRadius?:boolean;
     color?: ThemeColor;
     spacing?: ThemeSpacing;
 }
+
+export type ThemeWithAnyProps<P = any> = ThemedStyledProps<P,Theme>;

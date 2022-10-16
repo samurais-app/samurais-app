@@ -8,6 +8,5 @@ export const LoadingStyled = styled.div`
 `;
 
 export function Loading(props) {
-    console.log(props);
     return (<LoadingStyled>loading...</LoadingStyled>);
 }

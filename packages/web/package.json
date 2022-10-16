@@ -1,6 +1,6 @@
 {
   "name": "@samurais-app/web",
-  "version": "0.1.1",
+  "version": "0.2.0-beta.0",
   "description": "> TODO: description",
   "author": "PC-202206061615\\Administrator <liuwei@51cto.com>",
   "homepage": "https://github.com/samurais-app/samurais-app/tree/main/packages/web-plugins#readme",
@@ -57,11 +57,12 @@
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
+    "@frade-sam/samtools": "1.1.4",
     "@mui/material": "^5.10.0",
     "@mui/system": "^5.10.0",
-    "@samurais-app/components": "^0.1.1",
-    "@samurais-app/lib": "^0.1.0",
-    "@samurais-app/platform-core": "^0.1.0",
+    "@samurais-app/components": "^0.2.0-beta.0",
+    "@samurais-app/lib": "^0.2.0-beta.0",
+    "@samurais-app/platform-core": "^0.2.0-beta.0",
     "axios": "^0.27.2",
     "classnames": "^2.3.1",
     "react": "^18.2.0",

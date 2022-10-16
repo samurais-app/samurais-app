@@ -5,9 +5,6 @@ on:
     branches:
       - dev
 
-env:
-  CI: true
-
 jobs:
   test:
     runs-on: ubuntu-22.04
@@ -47,5 +44,3 @@ jobs:
 
       - name: test
         run: npm run test
-
-    
