@@ -57,6 +57,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
+    "@frade-sam/samtools": "1.1.4",
     "@mui/material": "^5.10.0",
     "@mui/system": "^5.10.0",
     "@samurais-app/components": "^0.2.0-beta.0",

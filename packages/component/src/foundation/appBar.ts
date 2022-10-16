@@ -20,3 +20,8 @@ export function appBarBackground(props: ThemeWithAppBarBaseProps) {
     if(props.transparent) return opacity(completionHex(props.theme.color.background), 0.01);
     return props.background ? props.background : 'transparent';
 }
+
+export function navigationPadding(props: ThemeWithAppBarBaseProps) {
+    const theme = props?.theme ?? DefaultTheme;
+    return `0${theme.unit} ${theme.Size(theme.spacing.padding[1])}${theme.unit}`;
+}

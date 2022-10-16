@@ -10,7 +10,7 @@ export function App() {
     return (
         <React.Fragment>
             <ConfigProvider>
-                <ThemeConfig>
+                <ThemeConfig theme={{ color: { background: '#15192c', primary: '#7950ec' } }}>
                     <BrowserRouter>
                         <AnimatedSuspense>
                             <Routes>
