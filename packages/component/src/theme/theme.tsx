@@ -13,11 +13,11 @@ export interface ThemeContextProps {
 }
 
 const Global = createGlobalStyle<ThemedStyledProps<any,Theme>>`
-    ::-webkit-scrollbar {
+    ::scrollbar {
         width: 0.8em;
         height: 0.8em;
     }
-    ::-webkit-scrollbar-thumb {
+    ::scrollbar-thumb {
         background-color: ${props => complementaryColor(props.theme.color.background)};
         border-radius: 25px;
     }
@@ -28,6 +28,12 @@ const Global = createGlobalStyle<ThemedStyledProps<any,Theme>>`
         height: 100vh;
         background-color: ${props => props.theme.color.background};
         overflow: overlay;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    ul,li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
     #app {
         margin: 0;

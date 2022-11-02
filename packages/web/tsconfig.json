@@ -5,6 +5,7 @@
     "jsx": "react", /* Specify what JSX code is generated. */
     "module": "commonjs", /* Specify what module code is generated. */
     "baseUrl": ".",
+    "resolveJsonModule": true,
     "sourceMap": true, /* Create source map files for emitted JavaScript files. */
     "outDir": "./build/", /* Specify an output folder for all emitted files. */
     "removeComments": true, /* Disable emitting comments. */

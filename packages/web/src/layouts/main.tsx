@@ -1,7 +1,8 @@
 import React from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
-import { AppBar } from '@samurais-app/components';
+import { AppBar, Menu } from '@samurais-app/components';
 import { AuthLogin } from 'src/components/AuthLogin';
+import { pkg } from '../config';
 import { Application, ApplicationExtends, ApplicationLogo, ApplicationLogoBox, ApplicationLogoText } from './layout.styled';
 
 export default function Layout() {
@@ -14,7 +15,7 @@ export default function Layout() {
                 logo={
                     <ApplicationLogoBox>
                         <ApplicationLogo />
-                        <ApplicationLogoText version='1.0.1'>samurais</ApplicationLogoText>
+                        <ApplicationLogoText version={pkg.version}>samurais</ApplicationLogoText>
                     </ApplicationLogoBox>
                 }
                 extends={
@@ -25,7 +26,9 @@ export default function Layout() {
                 transparent
                 fixed
             >
-                <div>自动change</div>
+                <Menu>
+                    <Menu.Item accessory={[<Menu.Item>1</Menu.Item>]}>1231</Menu.Item>
+                </Menu>
             </AppBar>
             <Outlet />
         </Application>

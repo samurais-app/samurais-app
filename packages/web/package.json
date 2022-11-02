@@ -24,7 +24,8 @@
   },
   "scripts": {
     "start": "webpack serve -c ./webpack.config.js --env development",
-    "build": "webpack -c ./webpack.config.js --env production",
+    "build:prod": "webpack -c ./webpack.config.js --env production",
+    "build:test": "webpack -c ./webpack.config.js --env test",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
@@ -57,7 +58,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
-    "@frade-sam/samtools": "1.1.4",
+    "@frade-sam/samtools": "1.1.6",
     "@mui/material": "^5.10.0",
     "@mui/system": "^5.10.0",
     "@samurais-app/components": "^0.1.1",

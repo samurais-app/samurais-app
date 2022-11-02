@@ -109,6 +109,14 @@ jobs:
       - name: build
         run: npm run build
 
+      - name: build web test
+        if: github.base_ref == 'development'
+        run: npm run build:web-test
+
+      - name: build web prod
+        if: github.base_ref == 'master'
+        run: npm run build:web-prod
+
       - name: git status
         id: status
         shell: bash -ex {0}

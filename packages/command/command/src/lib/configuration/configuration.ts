@@ -23,7 +23,7 @@ export const DEFAULT_CONFIG: IConfigurationDoc = {
 
 export class Configuration implements IConfig {
     private static instance: Configuration;
-    constructor() {
+    constructor(private configPath: string = 'config') {
         if (Configuration.instance) return Configuration.instance;
         Configuration.instance = this;
         return Configuration.instance;
@@ -46,7 +46,7 @@ export class Configuration implements IConfig {
     }
 
     get path(): string | undefined {
-        const localPath = join(this.root, 'config', `${this.env}.config.yaml`);
+        const localPath = join(this.root, this.configPath, `${this.env}.config.yaml`);
         return localPath;
     }
 
@@ -86,7 +86,7 @@ export class Configuration implements IConfig {
     };
 
     create() {
-        const configPath = join(this.root, 'config');
+        const configPath = join(this.root, this.configPath);
         if (!existsSync(configPath)) mkdirSync(configPath, { recursive: true });
         if (existsSync(this.path)) return;
         writeFileSync(this.path, yaml.dump({ ...this.doc, plugins: this.doc.plugins.map<IPlugin>((p) => ({ type: p.type, name: p.name, version: p.version, options: p.options })) }), 'utf-8');

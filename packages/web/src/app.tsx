@@ -5,12 +5,13 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AnimatedSuspense, ConfigProvider } from './components';
 import { MainLayout, AuthLayout } from './layouts';
 import { Home, UserInfo, Login, Sign } from './pages';
+import { theme } from './config';
 
 export function App() {
     return (
         <React.Fragment>
             <ConfigProvider>
-                <ThemeConfig theme={{ color: { background: '#15192c', primary: '#7950ec' } }}>
+                <ThemeConfig theme={theme}>
                     <BrowserRouter>
                         <AnimatedSuspense>
                             <Routes>

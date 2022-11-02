@@ -4,6 +4,7 @@ const common = require('./config/webpack.common');
 const prodConfig = require('./config/webpack.prod');
 
 module.exports = (env) => {
-  if(env.development) return merge(devConfig, common);
-  return merge(prodConfig, common);
+  const _env = Object.keys(env).filter((i) => i !== 'WEBPACK_SERVE')[0]
+  if(env.development) return merge(devConfig, common({ env:_env }));
+  return merge(prodConfig, common({ env:_env }));
 }

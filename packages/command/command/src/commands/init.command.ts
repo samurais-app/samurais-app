@@ -10,10 +10,11 @@ export class InitCommand extends AbstractCommand {
             .command('init')
             .description('初始化平台服务')
             .option('-e, --env [env]', '服务启动配置文件', Environment.production)
-            .action(async (command: Command & { env: string }) => {
+            .option('-c, --config, [config]', '配置文件文件夹')
+            .action(async (command: Command & { env: string, config?: string }) => {
                 const inputs: Input[] = [];
                 const options: Input[] = [];
-                const config = new Configuration();
+                const config = new Configuration(command.config ?? 'config');
                 config.init(command.env as Environment);
                 await config.load();
                 config.check();

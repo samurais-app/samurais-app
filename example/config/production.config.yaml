@@ -4,7 +4,24 @@ port: '3000'
 plugins:
   - type: web
     name: '@samurais-app/web-plugins'
-    version: 0.0.5
+    version: '0.1.0'
+    options:
+      component: '@samurais-app/web'
+      version: '0.1.1'
+      root: build
+      assets: manifest.json
+      home: /app
+      login: /auth/login
+      filter:
+        - /app
+      prefix: /public/
   - type: auth
     name: '@samurais-app/auth-plugins'
-    version: 0.0.5
+    version: '0.1.0'
+    options:
+      client:
+        host: 0.0.0.0
+        port: 6379
+      name: session
+      password: test@dbuser2018
+      db: 0

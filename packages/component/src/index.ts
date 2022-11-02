@@ -7,3 +7,4 @@ export * from 'src/components/Select';
 export * from 'src/components/Check';
 export * from 'src/components/Avatar';
 export * from 'src/common/log';
+export * from 'src/components/Menu';

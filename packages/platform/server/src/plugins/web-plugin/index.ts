@@ -17,18 +17,21 @@ export default fp(async function (instance: FastifyInstance) {
 
     instance.route({
         method: ['GET'], url: '/*', handler: (req, res) => {
-            if (filterUri(req.url) && req.session && !req.session.get('user')) {
-                res.header('Content-Type', 'text/html');
-                res.redirect(login);
-            } else {
-                res.header('Content-Type', 'text/html');
-                res.code(200).send(template(files));
-            };
+            // if (filterUri(req.url) && req.session && !req.session.get('user')) {
+            //     res.header('Content-Type', 'text/html');
+            //     res.redirect(login);
+            // } else {
+            //     res.header('Content-Type', 'text/html');
+            //     res.code(200).send(template(files));
+            // };
+            res.header('Content-Type', 'text/html');
+            res.code(200).send(template(files));
         }
     });
     instance.register(compress, {
         requestEncodings: ['gzip']
     });
+    console.log('=====>', root, prefix, files);
     instance.register(filesstatic, {
         root,
         prefix,
